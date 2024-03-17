@@ -4,7 +4,7 @@
   <title>Copy Div to Clipboard</title>
   <style>
     button {
-      width: 150px;
+      width: 100px;
       height: 30px;
     }
   </style>
@@ -15,7 +15,7 @@
     <p>This is the content of the div.</p>
   </div>
 
-  <button onclick="copyToClipboard()">Copy Div Content</button>
+  <button onclick="copyToClipboard()">Copy Code</button>
 
   <script>
     function copyToClipboard() {
@@ -47,12 +47,12 @@
       var originalText = buttonElement.textContent;
 
       // Change the button text to "Copied"
-      buttonElement.textContent = 'Copied';
+      buttonElement.textContent = 'Copied!';
 
       // Set a timeout to change the button text back after 3 seconds
       setTimeout(function() {
         buttonElement.textContent = originalText;
-      }, 3000);
+      }, 1500);
     }
   </script>
 </body>
