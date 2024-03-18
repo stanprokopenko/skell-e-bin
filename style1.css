@@ -78,12 +78,12 @@ li {
 
 /* Links */
 a {
-  color: #0066cc;
+  color: #fe5b50;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #eb3329;
 }
 
 /* Images */
@@ -135,19 +135,18 @@ th {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #bbb;
-  color: #fff;
+  background-color: #ddd;
+  color: #757575;
   font-size: 1em;
   text-align: center;
   text-decoration: none;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 .button:hover {
-  background-color: #aaa;
+  background-color: #eee;
 }
 
 
