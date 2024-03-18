@@ -60,7 +60,7 @@
   width: 150px;
   height: 40px;
   margin-bottom: 20px;
-  background-color: #007BFF;
+  background-color: #bbb;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -71,7 +71,7 @@
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #aaa;
 }
 
   @media screen and (max-width: 600px) {
@@ -95,7 +95,7 @@ button:hover {
 <body>
   <h1>How to Draw Cylinders and Ellipses</h1>
 
-  <button onclick="copyToClipboard()">Copy Div Content</button>
+  <button onclick="copyToClipboard()">Copy Code</button>
 
   <div id="myDiv" class="container">
     <p>Hey, welcome back. We've been drawing a lot of boxes, and now we're moving on cylinders. Which, funny enough, also involves boxes.</p>
@@ -142,7 +142,7 @@ button:hover {
       var originalText = buttonElement.textContent;
 
       // Change the button text to "Copied"
-      buttonElement.textContent = 'Copied';
+      buttonElement.textContent = 'Copied!';
 
       // Set a timeout to change the button text back after 3 seconds
       setTimeout(function() {
