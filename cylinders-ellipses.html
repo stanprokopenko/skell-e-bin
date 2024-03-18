@@ -1,91 +1,28 @@
-<style>
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 5px;
-  color: #777;
-  background-color: #f0f0f0;
-  font-size: 14px
-}
-
-.container {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-}
-
-h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #000;
-}
-
-h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: #000;
-}
-
-h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-p {
-  margin-bottom: 15px;
-}
-
-ul, ol {
-  margin-bottom: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-@media screen and (max-width: 600px) {
-  body {
-    padding: 5px;
-  }
-
-  .container {
-    padding: 20px;
-  }
-}
-
-</style>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
 <body>
-
-<h1>How to Draw Cylinders and Ellipses</h1>
-
-<div class="container">
-  
-<p>Hey, welcome back. We’ve been drawing a lot of boxes, and now we’re moving on cylinders. Which, funny enough, also involves boxes.</p>
-<h2>Ovals vs ellipses</h2>
-<p>A lot of people seem to be confused about the difference between the two, so let’s get that out of the way..</p>
-<p>All ellipses are ovals. But not all ovals are ellipses. An egg-like oval is not an ellipse. Ellipses must have 4 equal quadrants.</p>
-<p>To fit an ellipse inside the square plane, look for a few key clues:</p>
-<ol>
-<li>A circle inside a square always touches the square at the middle of every edge, creating four points of contact. To find the exact midpoints, I use the <strong>X method</strong>. The intersection of the X helps us find the centers of all the edges.</li>
-<li>The minor axis is at the same angle as the receding lines of the box and crosses the center point.</li>
-<li>The major axis is perpendicular to the minor axis. It doesn't pass through the exact center of the square; it's slightly farther away due to foreshortening.</li>
-</ol>
-
-</div>
-
+  <article>
+    <h1 id="title">How to Draw Cylinders and Ellipses</h1>
+    <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    <div id="code-to-copy">
+      <p>Hey, welcome back. We’ve been drawing a lot of boxes, and now we’re moving on cylinders. Which, funny enough, also involves boxes.</p>
+      <h2>Ovals vs ellipses</h2>
+      <p>A lot of people seem to be confused about the difference between the two, so let’s get that out of the way..</p>
+      <p>All ellipses are ovals. But not all ovals are ellipses. An egg-like oval is not an ellipse. Ellipses must have 4 equal quadrants.</p>
+      <p>To fit an ellipse inside the square plane, look for a few key clues:</p>
+      <ol>
+      <li>A circle inside a square always touches the square at the middle of every edge, creating four points of contact. To find the exact midpoints, I use the <strong>X method</strong>. The intersection of the X helps us find the centers of all the edges.</li>
+      <li>The minor axis is at the same angle as the receding lines of the box and crosses the center point.</li>
+      <li>The major axis is perpendicular to the minor axis. It doesn't pass through the exact center of the square; it's slightly farther away due to foreshortening.</li>
+      </ol>
+    </div>
+  </article>
+<script src="script.js"></script>
 </body>
+</html>
