@@ -13,7 +13,7 @@ body {
   font-family: Open Sans,sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  color: #333;
+  color: #757575;
 }
 
 article {
@@ -25,30 +25,41 @@ article {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
+  color: #242424;
+  font-weight: 600;
 }
 
 h1 {
   font-size: 2.5em;
+  font-weight: 700
 }
 
 h2 {
-  font-size: 2em;
-}
-
-h3 {
   font-size: 1.75em;
 }
 
+h3 {
+  font-size: 1.25em;
+}
+
 h4 {
-  font-size: 1.5em;
+  font-size: 1em;
+  color: #474747;
+  font-weight: 700;
 }
 
 h5 {
-  font-size: 1.25em;
+  font-size: 1em;
+  color: #757575;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 h6 {
   font-size: 1em;
+  color: #757575;
+  font-weight: 600;
+  font-style: italic;
 }
 
 /* Paragraphs */
