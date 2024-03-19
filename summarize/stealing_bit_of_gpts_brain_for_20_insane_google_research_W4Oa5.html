@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <h1 id="title">Stealing bit of GPT's Brain for $20?!!! (INSANE GOOGLE RESEARCH)</h1>
+    <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    <div id="code-to-copy" class="container">
+<p>This paper was a <strong>collaborative effort</strong> by researchers from <strong>Google DeepMind, ETH Zurich, University of Washington, OpenAI, and McGill University</strong>. The <strong>core idea</strong> is that it's possible to extract precise information from production language models like OpenAI's ChatGPT through <strong>API access</strong>, even without direct access to the model's weights or source code.</p>
+
+<h2>Methodology</h2>
+
+<h3>Model Stealing Attack</h3>
+
+<p>The concept of a <strong>model stealing attack</strong> focuses on the <strong>final projection layer</strong> of a language model, which is crucial for predicting the next word in a sequence. By exploiting API access, researchers demonstrated that it's possible to recover this layer for transformer models. The process involves <strong>analyzing the log probabilities</strong> (log probs) of predicted words, allowing the researchers to deduce the dimension of the hidden layer and <strong>reconstruct the projection matrix</strong>.</p>
+
+<h3>Top-Down Approach</h3>
+
+<p>This research introduced a <strong>top-down approach</strong> to model stealing, which contrasts with the traditional <strong>bottom-up methods</strong> that begin from the input layer. The top-down method, by stealing the final layer first, reveals the <strong>model's width</strong> and, consequently, its <strong>total parameter count</strong>. This approach benefits by offering insights into the model's complexity and aiding in the understanding of deep learning models.</p>
+
+<h2>Findings</h2>
+
+<h3>Cost and Feasibility</h3>
+
+<p>The attack demonstrated in the research is <strong>cost-effective</strong> for various models. For smaller models like <strong>OpenAI's GPT-2 and Babbage</strong>, the cost to recover the embedding projection layer was <strong>under $20</strong>. The researchers also estimated that extracting the entire projection matrix of <strong>GPT-3.5 Turbo</strong> would cost <strong>under $2,000</strong> in queries. This shows that the financial feasibility of the method varies with the model's size, but remains within a reasonable range for significant insights into the model's structure.</p>
+
+<h3>Security Implications</h3>
+
+<p>The possibility of extracting detailed information from production models through such attacks raises <strong>significant security concerns</strong>. It suggests that future attacks could potentially extract even more critical information, posing a risk to the security of these models. In response to these concerns, <strong>OpenAI and Google modified their APIs</strong> to introduce mitigations against such attacks, showcasing the seriousness of the implications and the swift action taken by these companies to safeguard their models.</p>
+
+<h2>Attack Method Details</h2>
+
+<h3>Targeted Queries and Statistical Analysis</h3>
+
+<p>The attack method involves <strong>making targeted queries</strong> to the model's API and <strong>analyzing the output</strong> to deduce the underlying structure of the final layer. This process is crucial for models that generate outputs based on a <strong>probability distribution</strong> over a set vocabulary. By conducting <strong>statistical analysis</strong> of the outputs, it's possible to infer the structure of the model's output layer. The essence of this method is to generate an output from tokens with the <strong>highest probability score</strong>, allowing for a deeper understanding of the model's final layer without direct access to its internals.</p>
+
+<h3>Hidden Dimension Extraction</h3>
+
+<p>The process of <strong>hidden dimension extraction</strong> begins with choosing an initial <strong>N value</strong> greater than the hidden layer size (H) and initializing an empty matrix of dimensions N by L, where L is the logit vector and H is the hidden layer. Through <strong>iterative prompts</strong> sent to the model and collecting outputs in the matrix, <strong>Singular Value Decomposition (SVD)</strong> is employed to reduce dimensions and ultimately determine the hidden layer size (H by L). This method is based on the intuition that querying a language model with a large number of different prompts reveals that output vectors, despite being L-dimensional, actually lie in an H-dimensional subspace. By querying the model more than H times, it becomes apparent that new queries are <strong>linearly dependent</strong> on past queries, allowing for the computation of the hidden dimensionality of the model using SVD. An example with the <strong>Pythia model</strong> illustrates that beyond a certain number of queries, no new significant information is gained, indicating the hidden dimensionality. This approach has been successful in estimating the hidden dimensions of various models with minimal error, demonstrating the effectiveness and scalability of the method.</p>
+
+<h2>Implications and Responses</h2>
+
+<h3>Security and Understanding of Models</h3>
+
+<p>This research <strong>opens up the black box</strong> of deep learning models slightly, aiding in the understanding of these models. However, it also raises <strong>significant security concerns</strong> by demonstrating the possibility of stealing any part of a production model. This suggests that future attacks could potentially extract even more critical information, highlighting the need for increased security measures to protect these models.</p>
+
+<h3>Company Responses</h3>
+
+<p>Following the study, <strong>OpenAI and Google modified their APIs</strong> to introduce mitigations against such attacks. This was done after a <strong>responsible disclosure process</strong>, where the researchers obtained approval from OpenAI, confirmed the attack's efficacy, and then deleted all associated data. The modifications made by these companies to their APIs are a direct response to the security concerns raised by the research, showcasing their commitment to safeguarding their models against potential threats.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>The research discussed in this paper is significant for several reasons. Firstly, it advances our <strong>understanding of language models</strong> by demonstrating a novel method to extract detailed information about these models through API access. This is crucial for the field of AI and machine learning, as it provides insights into the inner workings of complex models without needing direct access to their weights or source code.</p>
+
+<p>Secondly, the study highlights <strong>security vulnerabilities</strong> in production language models. By showing that it's possible to extract the final projection layer and potentially other critical information from these models, it raises important concerns about the security of AI systems. This has prompted companies like OpenAI and Google to modify their APIs to mitigate such attacks, underscoring the practical implications of the research.</p>
+
+<p>The innovative nature of the study is also noteworthy. The researchers liken the process of extracting information from language models to <strong>deducing ingredients from a finished dish</strong>. This analogy beautifully captures the essence of their approach—analyzing the output to infer the underlying structure and components. It's a testament to the creativity and ingenuity involved in pushing the boundaries of what's possible in AI research.</p>
+
+<p>In conclusion, this research not only sheds light on the complexities of language models but also emphasizes the importance of security in the development and deployment of AI technologies. It's a reminder of the ongoing need for vigilance and innovation in protecting these systems from potential threats.</p>
+    </div>
+  </article>
+<script src="../assets/script.js"></script>
+</body>
+</html>
