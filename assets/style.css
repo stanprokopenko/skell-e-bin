@@ -14,12 +14,25 @@ body {
   font-size: 14px;
   line-height: 1.5;
   color: #757575;
+  background-color: #f7f7f7;
 }
 
 article {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
+}
+
+.container {
+  background: #fff;
+  margin: 10px -20px;
+  padding: 40px;
+  box-shadow: 0 8px 40px #00000014;
+  border-radius: 10px;
+}
+
+.container > h2:first-of-type {
+  margin-top: 0;
 }
 
 /* Headings */
@@ -31,20 +44,22 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.5em;
-  font-weight: 700
+  font-weight: 700;
 }
 
 h2 {
   font-size: 1.75em;
+  margin-top: 30px;
 }
 
 h3 {
   font-size: 1.25em;
+  color: #555
 }
 
 h4 {
   font-size: 1.1em;
-  color: #474747;
+  color: #555
   font-weight: 700;
 }
 
@@ -64,6 +79,10 @@ h6 {
 /* Paragraphs */
 p {
   margin-bottom: 15px;
+}
+
+p strong, p b {
+  color: #555;
 }
 
 /* Lists */
@@ -136,8 +155,8 @@ th {
   display: inline-block;
   padding: 5px 20px;
   margin: 5px 0 10px;
-  background-color: #eee;
-  color: #757575;
+  background-color: #fe5b50;
+  color: #fff;
   font-size: 1em;
   text-align: center;
   text-decoration: none;
@@ -147,8 +166,8 @@ th {
 }
 
 .button:hover {
-  background-color: #e0e0e0;
-  color: #242424;
+  background-color: #eb3329;
+  color: #fff
 }
 
 .copy-link {
