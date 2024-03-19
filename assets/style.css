@@ -23,6 +23,10 @@ article {
   padding: 20px;
 }
 
+.header {
+  margin-left: 20px;
+}
+
 .container {
   background: #fff;
   margin: 10px -20px;
@@ -59,7 +63,7 @@ h3 {
 
 h4 {
   font-size: 1.1em;
-  color: #555
+  color: #555;
   font-weight: 700;
 }
 
