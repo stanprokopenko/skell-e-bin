@@ -1,12 +1,12 @@
 function copyToClipboard() {
   // Get the div element
-  var divElement = document.getElementById('code-to-copy');
+  var targetElement = document.getElementById('code-to-copy');
 
   // Create a temporary textarea element
   var tempTextarea = document.createElement('textarea');
 
   // Set the value of the textarea to the HTML content of the div
-  tempTextarea.value = divElement.innerHTML;
+  tempTextarea.value = targetElement.innerHTML;
 
   // Append the temporary textarea to the body
   document.body.appendChild(tempTextarea);

@@ -2,6 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+@font-face {
+  font-family: 'ArtegraSansCn-Medium';
+  src: url('ArtegraSansCn-Medium.woff2') format('woff2'), /* First, try loading the .woff2 font */
+       url('ArtegraSansCn-Medium.woff') format('woff'); /* Fallback to .woff if .woff2 is not supported */
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,16 +28,28 @@ body {
 article {
   max-width: 800px;
   margin: 20px auto;
-  padding: 20px;
 }
 
-.header {
-  margin-left: 20px;
+header {
+  margin: 20px;
+  padding-left: 20px;
+}
+
+footer {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.skell-e-sig {
+  font-family: 'ArtegraSansCn-Medium', verdana;
+  font-size: 1.25em;
+  color: #999;
 }
 
 .container {
   background: #fff;
-  margin: 10px -20px;
+  margin: 0;
   padding: 40px;
   box-shadow: 0 8px 40px #00000014;
   border-radius: 10px;
@@ -158,7 +178,6 @@ th {
 .button {
   display: inline-block;
   padding: 5px 20px;
-  margin: 5px 0 10px;
   background-color: #fe5b50;
   color: #fff;
   font-size: 1em;
@@ -181,8 +200,16 @@ th {
 
 /* Responsive styles */
 @media screen and (max-width: 600px) {
-  article {
-    padding: 10px;
+
+  header{
+    padding-left: 0
+  }
+
+  .container {
+    margin: 0 -20px;
+    padding: 40px;
+    box-shadow: 0 8px 40px #00000014;
+    border-radius: 0px;
   }
 
   h1 {
