@@ -35,6 +35,10 @@ header {
   padding-left: 20px;
 }
 
+.header {
+  margin: 40px;  /* For backwards compatibility. Delete this eventually */
+}
+
 footer {
   max-width: 800px;
   margin: 0 auto 50px;
