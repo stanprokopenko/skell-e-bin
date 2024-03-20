@@ -4,8 +4,8 @@
 
 @font-face {
   font-family: 'ArtegraSansCn-Medium';
-  src: url('ArtegraSansCn-Medium.woff2') format('woff2'), /* First, try loading the .woff2 font */
-       url('ArtegraSansCn-Medium.woff') format('woff'); /* Fallback to .woff if .woff2 is not supported */
+  src: url('../assets/ArtegraSansCn-Medium.woff2') format('woff2'), /* First, try loading the .woff2 font */
+       url('../assets/ArtegraSansCn-Medium.woff') format('woff'); /* Fallback to .woff if .woff2 is not supported */
   font-weight: 500; /* Medium weight */
   font-style: normal;
 }
@@ -59,7 +59,7 @@ footer {
   border-radius: 10px;
 }
 
-.container > h2:first-of-type {
+.container > h2:first-child {
   margin-top: 0;
 }
 
@@ -109,10 +109,6 @@ p {
   margin-bottom: 15px;
 }
 
-p strong, p b {
-  color: #555;
-}
-
 /* Lists */
 ul, ol {
   margin-bottom: 15px;
@@ -131,6 +127,13 @@ a {
 
 a:hover {
   color: #eb3329;
+}
+
+p strong, p b,
+ul strong, ul b,
+ol strong, ol b,
+table strong, table b {
+  color: #666;
 }
 
 /* Images */
