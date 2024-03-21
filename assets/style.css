@@ -1,14 +1,51 @@
 /* Reset default browser styles */
 
+
+/* Body Text Font */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+/* Header Font - Artegra Condenced */
 @font-face {
-  font-family: 'ArtegraSansCn-Medium';
-  src: url('../assets/ArtegraSansCn-Medium.woff2') format('woff2'), /* First, try loading the .woff2 font */
-       url('../assets/ArtegraSansCn-Medium.woff') format('woff'); /* Fallback to .woff if .woff2 is not supported */
-  font-weight: 500; /* Medium weight */
+  font-family: 'ArtegraSansCn';
+  src: url('../assets/fonts/ArtegraSansCn-Medium.woff2') format('woff2'),
+       url('../assets/fonts/ArtegraSansCn-Medium.woff') format('woff');
+  font-weight: 500;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'ArtegraSansCn';
+  src: url('../assets/fonts/ArtegraSansCn-SemiBold.woff2') format('woff2'),
+       url('../assets/fonts/ArtegraSansCn-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ArtegraSansCn';
+  src: url('../assets/fonts/ArtegraSansCn-Bold.woff2') format('woff2'),
+       url('../assets/fonts/ArtegraSansCn-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Body Font Special - Artegra */
+@font-face {
+  font-family: 'ArtegraSans';
+  src: url('../assets/fonts/ArtegraSans-Regular.woff2') format('woff2'),
+       url('../assets/fonts/ArtegraSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ArtegraSans';
+  src: url('../assets/fonts/ArtegraSans-Bold.woff2') format('woff2'),
+       url('../assets/fonts/ArtegraSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 * {
   margin: 0;
@@ -46,7 +83,8 @@ footer {
 }
 
 .skell-e-sig {
-  font-family: 'ArtegraSansCn-Medium', verdana;
+  font-family: 'ArtegraSansCn', verdana;
+  font-weight: 500;
   font-size: 1.25em;
   color: #999;
 }
@@ -65,10 +103,10 @@ footer {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'ArtegraSansCn-Medium', verdana;
+  font-family: 'ArtegraSansCn', verdana;
   margin-bottom: 10px;
   color: #242424;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h1 {
@@ -79,29 +117,33 @@ h1 {
 h2 {
   font-size: 2.25em;
   margin-top: 30px;
+  font-weight: 500;
 }
 
 h3 {
   font-size: 1.5em;
-  color: #555
+  color: #555;
+  font-weight: 600;
 }
 
 h4 {
   font-size: 1.25em;
   color: #555;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h5 {
+  font-family: Open Sans,sans-serif;
   font-size: 1em;
   color: #757575;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h6 {
+  font-family: Open Sans,sans-serif;
   font-size: 1em;
   color: #757575;
-  font-weight: 600;
+  font-weight: 700;
   font-style: italic;
 }
 
@@ -111,7 +153,12 @@ p {
 }
 
 /* Lists */
-ul, ol {
+ul {
+  margin-bottom: 15px;
+  padding-left: 33px;
+}
+
+ol {
   margin-bottom: 15px;
   padding-left: 30px;
 }
@@ -119,6 +166,11 @@ ul, ol {
 li {
   margin-bottom: 5px;
 }
+
+ol li {
+  padding-left: 3px;
+}
+
 
 /* Links */
 a {
@@ -146,9 +198,11 @@ img {
 
 /* Blockquotes */
 blockquote {
-  margin: 20px 0;
+  margin: 20px 0 20px 16px;
   padding: 10px 20px;
   border-left: 5px solid #ccc;
+  font-family: 'ArtegraSans', verdana;
+  font-size: 1.2em;
   font-style: italic;
 }
 
@@ -206,7 +260,11 @@ th {
 }
 
 
+
+
 /* Responsive styles */
+/* ----------------- */
+
 @media screen and (max-width: 600px) {
 
   header{
@@ -221,19 +279,20 @@ th {
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   h2 {
-    font-size: 1.75em;
+    font-size: 2em;
   }
 
   h3 {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 
   h4 {
     font-size: 1.25em;
+    font-weight: 500;
   }
 
   h5 {
@@ -241,6 +300,6 @@ th {
   }
 
   h6 {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 }
