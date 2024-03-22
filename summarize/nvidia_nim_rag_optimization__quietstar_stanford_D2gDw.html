@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">NVIDIA NIM RAG Optimization:  QuietSTAR (Stanford)</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<h2>Nvidia's AI Technologies and Collaborations</h2>
+
+<ul>
+
+<li>
+
+<p>The <strong>Blackwell 200</strong> was introduced as the foundation for an <strong>AI Center of Excellence</strong>.</p>
+
+</li>
+
+<li>
+
+<p><strong>Nemo</strong> is highlighted for customizing AI models, and <strong>Nim</strong> for deploying these models, with <strong>Nvidia Enterprises</strong> serving as a gateway.</p>
+
+<ul>
+
+<li>
+
+<p><strong>Nemo</strong> is an open-source tool that allows developers to easily create, train, and fine-tune AI models using PyTorch. It features modularity, a collection of pre-trained models, and supports fine-tuning with custom datasets.</p>
+
+</li>
+
+<li>
+
+<p><strong>Nim</strong> plays a crucial role within Nvidia's enterprise software, especially in rack deployment models, and was announced to focus on inference microservices, particularly retrieval augmented generation.</p>
+
+</li>
+
+</ul>
+
+</li>
+
+<li>
+
+<p>A partnership between <strong>Snowflake and Nvidia</strong> was discussed, emphasizing the integration of AI models with Snowflake's data and container services. This partnership has been extended to include <strong>Nim</strong>.</p>
+
+<ul>
+
+<li>Nvidia offers an <strong>Enterprise Edition AI software suite</strong> with hardware purchases, enabling companies to run AI operations securely within Snowflake's data cloud.</li>
+
+</ul>
+
+</li>
+
+<li>
+
+<p><strong>Hugging Face</strong> collaborates with Nvidia, allowing enterprise users to train models on Nvidia cloud services using <strong>H100 GPUs</strong>.</p>
+
+<ul>
+
+<li>The process and pricing for training models on Nvidia cloud through Hugging Face were detailed, highlighting the collaboration's potential to standardize AI development on Nvidia's platform.</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+<h2>AI Model Deployment and Enterprise Solutions</h2>
+
+<p><strong>Nvidia's Inference Microservices</strong> announced inference microservices with a focus on <strong>retrieval augmented generation</strong> for model deployment. This indicates a strategic direction towards enhancing model deployment capabilities.</p>
+
+<p><strong>Enterprise Edition AI Software Suite</strong> is offered by Nvidia with hardware purchases. This enables companies to run AI operations securely within <strong>Snowflake's data cloud</strong>.</p>
+
+<p><strong>Importance of Nvidia's Ecosystem</strong> is highlighted for aspiring <strong>enterprise AI engineers, developers, or coders</strong>. It's emphasized that familiarizing oneself with <strong>Nvidia's ecosystem</strong> is important.</p>
+
+<h2>AI Reasoning and Reliability</h2>
+
+<h3>Challenges of AI Hallucination</h3>
+
+<p>During an Nvidia Q&amp;A session, a concern was raised about <strong>AI hallucination</strong>, a phenomenon where AI models generate plausible but factually incorrect answers. Nvidia's CEO, Jensen, suggested a <strong>rule-based approach</strong> to verify AI-generated answers by examining sources and comparing facts to known truths. This highlights the challenge of ensuring AI reliability and accuracy. Humans naturally understand known truths, but AI systems may struggle to grasp these individual truths. AI systems, particularly large language models (LLMs) and retrieval systems, are now expected to conduct research before providing answers to ensure they offer the best possible response. The concept of AI doing research first is debated, considering these systems are trained to learn and apply knowledge from vast datasets.</p>
+
+<h3>Advancements in AI Reasoning</h3>
+
+<p>In February 2024, the introduction of <strong>Corrective Retrial Augmented Generation (CRA)</strong> was discussed as a method to improve AI's ability to research and provide better answers. A video from four months prior introduced <strong>Self-Reflective Retrieval Augmented Generation (SelfRAG)</strong>, which focuses on AI systems checking and supervising their own processes. Nvidia CEO Jensen Huang suggested that for mission-critical answers, such as those in health advice, AI should verify information across multiple resources and known sources of truth. On March 18, 2024, Stanford University published a new methodology enabling LLMs to <strong>"think before speaking,"</strong> which could be seen as a form of AI conducting research.</p>
+
+<h3>STAR Algorithm and QuietSTAR</h3>
+
+<p>The original <strong>STAR (Self-Taught Reasoner) algorithm</strong> from May 20, 2022, aimed to improve LLMs' complex reasoning abilities by generating step-by-step rationales. STAR uses a bootstrapping mechanism to iteratively improve rational generation, learning from a small initial set of examples and enhancing with each execution. This method allows LLMs to learn beyond correctly solved problems, incorporating a backward reasoning approach to enrich training datasets and overall model performance. An example provided illustrates how an LLM can use rationales to determine that a basket is the best option for carrying a small dog, showcasing the model's reasoning process. Understanding an AI system's rationale behind decisions builds trust and insight into its decision-making process, highlighting errors and improving generalization for future reasoning tasks.</p>
+
+<p><strong>QuietSTAR</strong>, an advancement of the original STAR algorithm, introduced massive parallelization and a token-wise parallel sampling algorithm to improve performance significantly. QuietSTAR showed a significant improvement in performance on benchmark sets, with increases in accuracy for both mathematical benchmarks and common sense question-and-answer datasets. The process involves generating rationales after every token in the input sequence, which they refer to as the "thinking process." The future text prediction is mixed with and without the rationales, termed the "talking" phase. The system learns to generate better rationales using a reinforcement mechanism, a learning phase inspired by a 1992 reinforcement learning algorithm for statistical gradient following. Quiet Star, the system in question, generates a "sword" (rationale) for each token, following a think-talk-learn cycle. The three main steps include parallel rational generation across tokens, insertion of start/end tokens for rationals, and a mixing step using a multi-layer perceptron to determine the weight of post-rational logits versus base logits. The system optimizes rational generation parameters to increase the likelihood of rationals that make future text more probable, looking beyond the next token. Reinforcement learning provides a learning signal to rationals based on their impact on future token prediction.</p>
+
+<h2>Future Directions in AI Training and Reasoning</h2>
+
+<h3>Potential for New Training Methodologies</h3>
+
+<p>There's a hint at future content suggesting that <strong>supervised fine-tuning</strong> may be surpassed by better training methods for <strong>LLMs</strong>.</p>
+
+<h3>Importance of AI Systems Conducting Research</h3>
+
+<p>The debate on AI systems trained to learn and apply knowledge from vast datasets conducting research before providing answers is significant. Considering these systems are trained to learn and apply knowledge from vast datasets, the concept of AI doing research first is debated.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
