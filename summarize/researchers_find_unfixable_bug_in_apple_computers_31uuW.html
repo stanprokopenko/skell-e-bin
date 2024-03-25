@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">researchers find unfixable bug in apple computers</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<h2>Overview of the Vulnerability</h2>
+
+<p>There's a <strong>new bug</strong> affecting Apple's <strong>M1, M2, and M3 chipsets</strong>, which is a flaw in the silicon design of the CPU, making it <strong>unpatchable without physically replacing the CPU</strong>. This bug requires <strong>local access</strong> to exploit, meaning an attacker needs to have access to the computer to utilize it. The bug is part of research from various universities and researchers, compiled into a <strong>white paper, proof of concept, and vulnerability</strong> collectively referred to as <strong>"Go Fetch."</strong> The vulnerability allows an <strong>unprivileged process</strong> to read data from another process, including <strong>cryptographic key information</strong>, by exploiting <strong>side-channel cache-based memory attacks</strong>.</p>
+
+<h2>Technical Background</h2>
+
+<p><strong>Side-channel attacks</strong> exploit the implementation details of a system to leak information, using indirect measures like time, heat, or sound. <strong>Cache memory</strong>, which is faster than RAM and sits between the CPU and RAM, is shared among processes and has been an attack surface for hackers through side-channel attacks. <strong>Constant time programming</strong> is a CPU architecture design that aims to make operations take the same amount of time regardless of cache hits or misses to prevent timing-based side-channel attacks.</p>
+
+<h2>The "Go Fetch" Bug</h2>
+
+<p>The "Go Fetch" bug exploits <strong>data memory dependent prefetchers (DMPs)</strong> in Apple silicon, which prefetch memory addresses without validating if they are actual pointers, not adhering to constant time programming. The vulnerability allows a process to monitor another process's memory access patterns through <strong>cache timing</strong>, potentially leaking cryptographic keys used by various libraries. The demonstration of the attack shows an attacker process filling up the cache and observing memory eviction to reveal information about the CPU and the cryptographic operations of another process.</p>
+
+<h2>Complexity of Exploitation</h2>
+
+<p>The complexity of the attack involves understanding <strong>CPU architecture and cryptographic implementation</strong>, highlighting the depth of knowledge required to discover and exploit such vulnerabilities.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
