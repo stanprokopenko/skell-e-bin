@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">This is what DeepMind just did to Football with AI...</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>I recently caught up with Peta Vitkovic from DeepMind in London to discuss his team's new paper, "Tactic AI: An AI Assistant for Football Tactics." Developed in close collaboration with Liverpool Football Club, tactic AI aims to help coaches identify key patterns and develop effective responses to rival teams' tactics.</p>
+
+<h2>Tactic AI Overview</h2>
+
+<p>Tactic AI incorporates both predictive and generative components, allowing coaches to effectively sample and explore alternative player setups for each corner kick and select those with the highest predicted likelihood of success. The model's suggestions are not only indistinguishable from real tactics but also favored over existing tactics 90% of the time.</p>
+
+<p>Corner kick situations are represented as graphs, with players as nodes and their relationships as edges. This allows modeling the interactions between players, which may be more important than absolute distances.</p>
+
+<h3>Geometric Deep Learning and Graph Attention Networks</h3>
+
+<p>At the core of tactic AI is geometric deep learning, which introduces symmetries and inductive priors to massively improve the sample efficiency and robustness of neural networks. Specifically, tactic AI uses a graph attention network, which captures symmetries in the game, such as invariance to horizontal or vertical reflections.</p>
+
+<p>Graph networks are excellent for capturing permutation symmetry invariance, learning relationships between players in the game, and projecting them into a high-dimensional vector space. The network is constrained to be invariant to different permutations of those relationships.</p>
+
+<h2>Focusing on Corner Kicks</h2>
+
+<p>Tactic AI focuses on corner kicks because they provide an immediate opportunity for goal scoring, occurring about 10 times on average in a game. Strategies for corners are usually decided well ahead of any particular game to avoid confusion during execution.</p>
+
+<p>By focusing on corner kicks, tactic AI can provide practical suggestions that have been specifically validated by experts from Liverpool Football Club. This focus allows coaches to meaningfully act on the AI's suggestions without confusing players during open play.</p>
+
+<h2>Reasoning and Statistical Motifs</h2>
+
+<p>Tactic AI is closer to system one reasoning, as it focuses on short-term predictions (around 10 seconds) for corner kicks. Longer-term predictions in open play are challenging due to the many unobservable factors in the game of football.</p>
+
+<p>While a more accurate model could be built to predict things further into the future, the game's inherent unpredictability makes it less practical. Even when shown roll-outs from an open play model, football experts thought the actual chances of a particular sequence unfolding were near zero when going far enough from the starting position.</p>
+
+<h2>Future Applications</h2>
+
+<p>The near future of tactic AI will likely center on set pieces, starting with corner kicks and expanding to free kicks and throw-ins. These situations, while not as controllable as corner kicks, still provide potentially dangerous opportunities.</p>
+
+<p>Full open play could be interesting in a more distributional sense, modeling higher-order patterns to drive substitutions or tactical adjustments. However, the approach used in tactic AI is not football-specific and could be applied to other team sports where player relationships can be modeled, such as basketball or American football.</p>
+
+<h2>Graph Neural Networks for Football Tactics</h2>
+
+<p>Graph machine learning, or geometric deep learning, is the best choice when the problem involves complex interactions and is natural in some sense. Examples include forecasting weather, predicting new material structures, and drug discovery.</p>
+
+<p>In football, structure plays a significant role in the distributional success of tactics, with strategies often involving tandems of triplets or even four players at once. Graph neural networks force the model to explicitly think about pairwise relations and take them into account when making predictions.</p>
+
+<p>For corner kicks, tactic AI uses a static graph with a fixed number of message-passing steps, resulting in a fixed computational budget. However, for open play, the message-passing can be extended to work with temporal sequences of frames, allowing for recurrence and sharing layers across different steps.</p>
+
+<h2>Impact on Coaches and the Sport</h2>
+
+<p>Tactic AI is not designed to directly suggest new tactics but rather to provide refinements to existing ones. By quickly proposing subtle adjustments to player positions, the system can help coaches identify critical patterns and areas for improvement in training.</p>
+
+<p>This frees up coaches to focus less on analyzing situations and more on creative, actionable decision-making. With more time for creativity, we may see an acceleration in the evolution of tactics in football.</p>
+
+<p>However, as with any adversarial domain, there is a concept drift as new tactics are tried out and the game becomes more creative over time. To account for this, tactic AI can be continuously retrained on new data, adapting to the ever-changing landscape of football tactics.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
