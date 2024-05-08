@@ -53,6 +53,11 @@
   box-sizing: border-box;
 }
 
+/* Added from Bokeh graphs */
+html, body {
+  display: flow-root;
+}
+
 /* Base styles */
 body {
   font-family: Open Sans,sans-serif;
