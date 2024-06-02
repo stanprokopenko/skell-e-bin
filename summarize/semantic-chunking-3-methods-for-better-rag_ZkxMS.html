@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">Semantic Chunking - 3 Methods for Better RAG</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>I'm taking a look at different types of semantic chunkers to chunk data for applications like RAG (Retrieval Augmented Generation) in a more intelligent and effective way. For now, I'm focusing on the text modality, but it's important to note that semantic chunking can be applied to video and audio as well. To get started, I'm using the semantic chunkers library and the chunkers intro notebook in Colab.</p>
+
+<h3>Setting up the Environment and Dataset</h3>
+
+<p>To begin, I installed the necessary prerequisites: semantic chunkers and Hugging Face datasets. The dataset I'm working with contains a set of AI archive papers with sections like title, author, and abstract. For the embedding model, I'm using OpenAI's text-embedding-ada-002 model for semantic chunking. However, it's possible to use an open-source model instead to avoid needing an API key.</p>
+
+<h2>Statistical Chunking Method</h2>
+
+<p>The statistical chunking method is <strong>recommended for out-of-the-box use</strong>. It's cost-effective and fast, making it a great choice for many applications. This method identifies a good similarity threshold value based on varying similarity throughout a document. The resulting chunks look relatively good, but they may need more detailed review to ensure optimal performance.</p>
+
+<h2>Consecutive Chunking Method</h2>
+
+<p>The consecutive chunking method is the <strong>second recommended method</strong>. Like the statistical chunking method, it's cost-effective and relatively quick. However, it requires more tweaking or inputs, primarily due to the score threshold. Different encoders require different score thresholds. For example, text-embedding-ada-002 works well with a threshold between 0.73 and 0.8, while text-embedding-ada-003 requires a much smaller threshold, like 0.3.</p>
+
+<p>The performance of the consecutive chunking method can be better in some cases, but it's harder to achieve very good performance consistently. This method splits text into sentences and merges them into larger chunks based on drops in similarity between sentences.</p>
+
+<h2>Cumulative Chunking Method</h2>
+
+<p>The cumulative chunking method takes a different approach. It starts with sentence 1, adds sentence 2 when creating an embedding, then adds sentence 3 and creates another embedding. It compares the embeddings of sentences 1-2 and 1-2-3, looking for a significant change in similarity. This process continues, cumulatively adding text and creating embeddings.</p>
+
+<p>One drawback of the cumulative chunking method is that it takes longer to run and is more expensive due to creating more embeddings. However, it's more noise-resistant compared to consecutive chunking. The results tend to be a bit better than consecutive chunking, but on par or slightly worse than statistical chunking.</p>
+
+<h2>Differences in Modalities Handled by Chunkers</h2>
+
+<p>It's important to note the differences in modalities handled by each chunker:</p>
+
+<ul>
+
+<li>The statistical chunker only handles text modality.</li>
+
+<li>The consecutive chunker can handle any modality, including video.</li>
+
+<li>The cumulative chunker is more text-focused.</li>
+
+</ul>
+
+<p>By understanding the strengths and limitations of each chunker, I can choose the most appropriate method for my specific use case and data modality.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
