@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">How to Colorize Grayscale Art in Photoshop</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>In this demo, we'll explore how to colorize a grayscale image using adjustment layers and blending modes in Photoshop. This process involves several steps, including initial adjustments, merging layers, and refining colors to achieve realistic effects.</p>
+
+<h2>Initial Adjustments</h2>
+
+<p>Start by creating adjustment layers. You can do this by clicking the adjustment layer icon at the bottom of the layers palette. All adjustment layers come with a layer mask, allowing you to paint in the areas you want the adjustment to affect. Adjustment layers can also have blending modes applied and can be clipped to other layers and groups with Control-Alt-G.</p>
+
+<p>First, decrease the contrast of the image as a whole. Open a levels adjustment layer and adjust the output levels to push the blacks up towards a mid-tone gray and pull the whites down towards a lighter gray. This helps prevent the image from becoming too contrasty as you add more layers.</p>
+
+<p>Next, add some initial color using a color balance layer. Push the shadows towards an orangish color and the lights towards a cyan blue. Experiment with the mid-tones until you find a good starting point.</p>
+
+<h2>Merging Layers</h2>
+
+<p>Decide whether to flatten the layers or keep them separate. Keeping layers separated can save time, but you'll need a way to merge the levels and color balance with all the character layers. The slower method is to use Control-Alt-G to clip adjustment layers to each character layer and then merge them with Control-E.</p>
+
+<p>For a faster method, use the Layers Factory plugin by Sergei Kritsky. Select all the character layers, mark target layers, select adjustment layers, and then use Clips to Targets and Merge. This plugin duplicates and merges adjustment layers automatically, saving you time.</p>
+
+<h2>Colorizing Techniques</h2>
+
+<h3>Using Blending Modes</h3>
+
+<p>Different blending modes can be used for colorizing:</p>
+
+<ul>
+
+<li><strong>Color Blending Mode</strong>: Not ideal as it doesn't account for different values and saturation levels well.</li>
+
+<li><strong>Multiply Layer</strong>: Applies color and darkens the image but can significantly adjust values.</li>
+
+<li><strong>Overlay Layer</strong>: A strong contender for adding color without damaging the values. </li>
+
+</ul>
+
+<p>For example, to colorize the skin, create a new layer set to overlay, clip it to the face and hair layer, and start painting with a round brush. Adjust colors using hue saturation if needed.</p>
+
+<h3>Gradient Maps</h3>
+
+<p>Gradient maps replace values in your image with colors you select on nodes. Open a gradient map, set nodes of color, and have them transition between different colors from shadows to lights. Adjust the blending mode to see which one feels correct.</p>
+
+<p>For example, to colorize the headdress, create a gradient map, clip it to the headdress, and set the nodes to transition from warmer shadows to blue highlights. Adjust the nodes until you get the right balance of color.</p>
+
+<h2>Refining Colors</h2>
+
+<h3>Adding Realistic Effects</h3>
+
+<p>To avoid the "colorized effect" where colors look flat and unrealistic, add variety and interest using blending modes and adjustment layers. Consider local color differences, such as darker, more reddish lips, and adjust lights and shadows accordingly.</p>
+
+<p>For example, use a multiply layer with a soft brush to push an orangish tone into the shadows and a light blue color set to overlay for the lights. Adjust values with another multiply layer if needed.</p>
+
+<h3>Managing Layers</h3>
+
+<p>Manage a large layer stack by using Control-click to select specific layers. Copy and paste gradient maps for consistent materials. For example, apply the same gradient map used for the headdress to a skull on the shoulder.</p>
+
+<h2>Practical Examples</h2>
+
+<h3>Headdress and Earpiece</h3>
+
+<p>Use gradient maps for the headdress, transitioning from warmer shadows to blue highlights. For the earpiece, create a rusty, bronzish color with a second gradient map for oxidization effects. Set the blending mode to hue and paint in the effect with a gritty brush.</p>
+
+<h3>Beads and Fur</h3>
+
+<p>Establish overall forms with an overlay layer and add colors to beads with a multiply layer. Use a lighten layer for pearly effects, adjusting opacity as needed. For fur, use a gradient map to add interesting textures and adjust the mask to affect specific areas.</p>
+
+<h2>Final Adjustments</h2>
+
+<p>Push background colors to match the overall palette, with warmer shadows and blue highlights. Refine subtleties and improve the image by adjusting blending modes and opacity.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>By using adjustment layers and blending modes, you can effectively colorize a grayscale image. Experiment with different techniques and refine the process to achieve realistic and interesting effects.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
