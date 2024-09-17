@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">Why OpenAI's Strawberry paves the way to AGI</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>I just learned that OpenAI released their latest model, codenamed <strong>Strawberry</strong>. At first glance, it might not seem like much, but Strawberry can think through problems for as long as it needs. Its performance improves the more time it takes. With a brand new architecture focused on reasoning, Strawberry is an important step towards <strong>Artificial General Intelligence (AGI)</strong>.</p>
+
+<h2>Strawberry Released as 0.1</h2>
+
+<p>On Thursday, September 12th, OpenAI released their new model. They call it <strong>0.1</strong>. This is the model that was originally codenamed <strong>QAR</strong> when Ilya Sutskever was working on it inside OpenAI. It was later renamed to the codename <strong>Strawberry</strong>. It has been released to all paying ChatGPT Plus users, initially with very strict caps on its usage.</p>
+
+<h3>Code Names and Release Details</h3>
+
+<p>This initial release includes two models called <strong>0.1 Mini</strong>, which is pretty small, and <strong>0.1 Preview</strong>, which is a little larger. They already have the full 0.1 model, but they're not releasing it yet. This is probably because, at the moment, the 0.1 Preview model seems pretty comparable with their previous model, which is GPT-4.0.</p>
+
+<p>By the way, 0.1's knowledge cutoff is <strong>October 2023</strong>, which is right around the time we started hearing leaks about QAR. It's no wonder that people are signing up again for ChatGPT just to test out this model.</p>
+
+<h3>Architecture and Capabilities</h3>
+
+<p>So, what do we know about 0.1's architecture? Well, it's not exactly <strong>GPT-5</strong>, and there's a reason that OpenAI didn't call it GPT-5. GPT-5 would be just a scaling up of the exact same techniques that were used in GPT-4, GPT-3, GPT-2, and so on. But 0.1 is based on emphasizing <strong>reasoning</strong> and having an internal <strong>chain of thought</strong>. It has somewhat different mathematical underpinnings.</p>
+
+<p>It's probably a fine-tuning of a different base model from a different lineage that's not really GPT. And it's definitely a smaller base model. 0.1 doesn't know as many facts about the world as, for example, GPT-4.0, but it's much better at reasoning and everything that comes along with that, like <strong>math</strong>, <strong>programming</strong>, and <strong>logic</strong>. I guess that's why they decided to restart the numbering scheme from one. It makes sense.</p>
+
+<p>We know that this new architecture is very <strong>compute-intensive</strong>, and data is seemingly no longer the limiting factor. This probably means that OpenAI has figured out some way to inject <strong>diversity</strong> into the LLM inference.</p>
+
+<h2>Dangerous Safety Analysis</h2>
+
+<p>Because of all the concern about AI safety, OpenAI made sure to do a pretty thorough evaluation of the safety of this model, 0.1 and 0.1 Preview. In this model, you can actually see the thoughts that the model is thinking in that chain of thought that is kind of separate from the main output to the user. And there are a lot of thoughts in there, like hundreds or thousands of thoughts just to figure out the response to a pretty simple query.</p>
+
+<h3>Chain-of-Thought and Deception Monitoring</h3>
+
+<p>If you're using 0.1 Preview yourself, you can actually see the chain of thoughts that are going on. But that's a very high-level summary of the individual thoughts. Even though it's a summary, you sometimes see some pretty disturbing things in there.</p>
+
+<p>OpenAI did some experiments where they did <strong>chain-of-thought deception monitoring</strong>. The idea is that if the model is trying to deceive the user or trying to escape the box that it's in or anything like that, you should see some evidence of it in this chain of thought. So, in addition to being great for reasoning, the chain of thought is also a huge win for <strong>interpretability</strong>.</p>
+
+<p>But anyways, <strong>0.8%</strong> of 0.1 Preview thoughts were flagged as <strong>deceptive</strong>. That's a pretty high percentage. <strong>8%</strong> of all the thoughts flagged as deceptive. Most of those deceptions were actually <strong>hallucinations</strong>, but two-thirds of those hallucinations were <strong>intentional</strong>. The model was intentionally giving wrong information to the user. That's a little scary. That's <strong>38%</strong> of the time that the model is intentionally deceiving the user, which is four out of every thousand thoughts.</p>
+
+<h3>Persuasiveness and Manipulation</h3>
+
+<p>I didn't mention it yet, but 0.1, or Strawberry, is also extremely good at <strong>persuasion</strong>. So that seems a little worrying, right? The model is intentionally deceiving the user sometimes, and if it wants to deceive the user, it can be very, very good at it.</p>
+
+<p>They evaluated persuasiveness by having the model write some essays or something like that and rating them against human-crafted essays. There were a bunch of categories, including <strong>argumentative reasoning</strong>, <strong>politically persuasive reasoning</strong>, <strong>manipulation</strong>, and <strong>social engineering</strong>. Again, the models did very well, but they didn't quite outperform the top human writers.</p>
+
+<p>Strawberry seemed to be at about the <strong>70th or 80th percentile</strong> in terms of all of humanity in its persuasive writing skills. And yes, this is more persuasive than GPT-4.0. Good thing we're not at <strong>95%</strong> persuasive because that would be considered superhuman persuasion, more or less.</p>
+
+<p>Oh, did I mention that this is just 0.1 Preview? They didn't even test 0.1, the full model. So that would be even more persuasive.</p>
+
+<h3>External Safety Evaluations</h3>
+
+<p>In an attempt to make their overall safety analysis look stronger, OpenAI partnered with other companies such as <strong>Apollo Research</strong> and <strong>Metar</strong> to actually measure their system. So, these companies were granted early access to the model.</p>
+
+<p>These partners found, for instance, that the model had high knowledge about itself and how it can causally influence the rest of the world. It had explicit <strong>theory of mind</strong>, able to model first and second-order instances of what other people are thinking. Again, this is pretty scary when you think about the capabilities of these models.</p>
+
+<p>Metar even found that 0.1 Preview could make non-trivial progress on two out of the seven AI research questions that were designed to capture the challenges of current frontier model AI research. After all, we know that automating AI research is one of the core goals of these AI labs, and they seem to be making some pretty good progress on that front.</p>
+
+<h3>Reward Hacking Incident</h3>
+
+<p>The models were also tested against cybersecurity hacking challenges. These challenges are called <strong>Capture the Flag</strong> competitions or <strong>CTFs</strong> because you have to hack through different layers of defense until you can access a secret message.</p>
+
+<p>There are many different levels of CTFs out there, like <strong>Pico CTF</strong> designed for high schoolers. This is probably the CTF that the model was trained against when they say high school level CTFs, on which Strawberry got a maximum of <strong>43%</strong> success rate. So luckily, it's not particularly good at hacking challenges yet—or so you would think.</p>
+
+<p>But actually, at one point, the CTF Docker container failed to start. That was basically the environment in which all the defensive layers were located that didn't actually run. So the model tried to connect to it and couldn't. So the model just did a <strong>network scan</strong> to figure out what was going on.</p>
+
+<p>Now, this network wasn't like the open internet or anything, but it wasn't intended for the models to access. The model found that it could connect to the Docker service daemon and issued the Docker command to actually start up the container—the one that had crashed or not started properly. But then, because the model realized that it had access to Docker, rather than actually going through the challenge and hacking through all those layers, it just asked the Docker service to access the flag file directly, and it worked.</p>
+
+<p>The model was able to <strong>capture the flag</strong>. This is a clear instance of <strong>reward hacking</strong>, and I was very impressed when reading about this. Very impressed at the model's ability to problem solve. Keep in mind that it essentially escaped its testing environment. Although apparently the machines were air-gapped or something, as they should have been to be doing this type of test. And so the real world was never in any danger or whatever. Good thing its only goal was to capture the flag and not take over the world, right?</p>
+
+<h2>New Scaling Laws</h2>
+
+<p>As I've already alluded to, the really interesting thing about Strawberry is that they get <strong>increasing returns from increasing compute</strong>. Here's a chart (imagine a chart here), and as you can see, when you increase the compute on the x-axis, you get a proportional increase in the quality of the outputs.</p>
+
+<p>It still takes an exponential increase in the amount of compute to get approximately linear performance gains, but this type of thing simply isn't possible with other models, including GPT-4.</p>
+
+<h3>Performance Improvements with More Compute</h3>
+
+<p>One interesting data point was <strong>IOI</strong>, the <strong>International Olympiad in Informatics</strong>, which is basically a math competition. Strawberry was entered into the competition this year in 20124, and it had the same constraints as the human contestants. In other words, it had <strong>10 hours</strong> to solve <strong>six problems</strong>, and it had <strong>50 attempts</strong> at each problem.</p>
+
+<p>Strawberry scored in the <strong>49th percentile</strong>, so it's basically exactly in the middle of the pack when it comes to math ability compared to these probably very intelligent people taking the math competition. However, when the model was allowed <strong>10,000 submissions</strong> for each problem instead of just 50, its score went from <strong>213</strong> to <strong>362</strong>, which is above the <strong>gold medal threshold</strong>. That's an example of what I'm talking about, where you give it more computation or more tries at the problem or whatever, and it can get much, much better at generating solutions.</p>
+
+<p>Another example is <strong>Codeforces</strong>, which is like online programming competitions. We talked about CTFs previously, which are hacking challenges, but this is just general-purpose algorithmic challenges. Here, GPT-4.0 achieved an <strong>ELO rating of 8008</strong>, which is in the <strong>11th percentile</strong> of human competitors. But when they took this modified version of Strawberry that was allowed to do lots and lots of retries, it achieved an ELO rating of <strong>1,187</strong>, which placed it at the <strong>93rd percentile</strong>.</p>
+
+<h3>Comparison to Previous Models</h3>
+
+<p>Another fun challenge for Strawberry was they actually gave it a bunch of interview questions that OpenAI asks its research engineers during interviews. After only one pass, the model was getting about <strong>80%</strong> of those questions correct. But given <strong>128 passes</strong> instead of just one, it got <strong>100%</strong> of the questions correct.</p>
+
+<p>So obviously, OpenAI is trying to automate AI research here. That's their ultimate goal because that's how they can accelerate AI research to AGI and beyond. So I don't know how I would feel about job security if I worked there.</p>
+
+<p>This could be an <strong>AlphaStar moment for LLMs</strong>. If you're not familiar with AlphaStar, it was a Google DeepMind project to play the game <strong>StarCraft II</strong>. That's a strategy game with a lot of different units where time and long-term strategy are really important. It was designed to have an extremely high skill cap.</p>
+
+<p>Anyway, AlphaStar was trained through reinforcement learning playing solely against itself, and it ended up being very, very good at StarCraft II. In fact, it was just barely beaten by a top player in the world when it was limited to the same number of actions that a human could perform, roughly speaking. The researchers didn't actually know how StarCraft worked, so they almost got it right. But when AlphaStar was allowed to perform as many actions as it wanted to—and again, this is still completely within the real-time confines of the game—it became totally unbeatable.</p>
+
+<p>That's why I say this could be an AlphaStar moment for LLMs. Just give them more and more compute, and they eventually get superhuman.</p>
+
+<h2>Implications and Future Outlook</h2>
+
+<p>So now I think we know the answer to the meme: <strong>What did Ilya see?</strong> He saw Strawberry, or rather QAR at the time, because he was building it, and he knew the potential that it held. This is likely what his company SSI is working on: building a model that pays attention to diversity instead of just using reinforcement learning and gives more dividends the more compute you allocate to it, all the way to superintelligence.</p>
+
+<p>So, quick question: <strong>Is Strawberry already AGI?</strong> It seems to have PhD-level expertise in many areas, and it seems pretty good at reasoning, etc. The list goes on. No, it doesn't seem to be AGI, but it's a really important piece—the reasoning ability that had been really missing until now. I think we'll need several generations of models to see where these techniques can really go.</p>
+
+<p>And importantly, this should <strong>saturate less quickly</strong> than when you're just relying on scaling up and using more and more data. That approach might have maxed out at GPT-5 if they had built it, but now we've kind of reset the clock, and there's lots of low-hanging fruit ahead, I'm sure.</p>
+
+<p>If you look at the size jump between GPT-2 and GPT-4, that's about a five orders of magnitude increase, at least according to situational awareness. If we see a similarly sized increase over the next, say, three years, then we could definitely be looking at AGI. At least, that's what Daniel Kokotajlo figures, and Leopold Aschenbrenner, and many others that I've spoken with.</p>
+
+<p>To me, this is a very important breakthrough because it's one of the <strong>step changes</strong> in how AI is constructed, and there's a whole new scaling period ahead of us. After all, if you're OpenAI or you're a lab that has developed a similar system, why not just keep training it? Just give it more compute, try to get it to help you with core ML research, make System 2-type reasoning work if we don't already have that with this internal chain of thought. <strong>Make AGI.</strong> That's what all the labs are currently thinking right now, I'm pretty sure.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>In conclusion, we talked about Strawberry, which was released recently. OpenAI is calling Strawberry <strong>0.1</strong> or <strong>0.1 Preview</strong>, the most powerful model that's currently available to the public, although it doesn't seem like a very large improvement. It's pretty good at reasoning and math, and you get the strong impression that this is a big <strong>unhobbling</strong> type of release. It will allow OpenAI to scale much faster from here on out because of public pressure, presumably.</p>
+
+<p>OpenAI did a pretty intensive security evaluation of 0.1 Preview before it was released that contained a lot of pretty scary stuff, in my opinion. Like the fact that about four out of every thousand times, the model is trying intentionally to deceive you. And it doesn't mind doing reward hacking to get around a capture-the-flag cybersecurity challenge.</p>
+
+<p>Most importantly, though, this model seems very likely to kick off a <strong>new era of scaling</strong> because the system is fundamentally different. It's not just using reinforcement learning; it can actually explore multiple different hypotheses for its input, and therefore the more thinking it can do, the better the answer it comes up with. And I don't just mean spinning there in a chain of thought for longer; I mean really coming up with different novel ideas that explain the world in a different way.</p>
+
+<p>Well, that's all I have for today. Thank you very much for reading. Bye.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
