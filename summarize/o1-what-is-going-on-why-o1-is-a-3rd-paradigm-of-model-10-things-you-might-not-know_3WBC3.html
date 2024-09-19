@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">o1 - What is Going On? Why o1 is a 3rd Paradigm of Model + 10 Things You Might Not Know</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>Recently, the world has been processing the impact of OpenAI's <strong>01 preview</strong>. I've dove into several papers to understand what 01 is and what's coming next. I believe the 01 preview represents a <strong>step change</strong> in how models are trained and what they can do.</p>
+
+<h2>The Evolution of Language Models</h2>
+
+<h3>Paradigm 1: Predicting the Next Word</h3>
+
+<p>Initially, language models were designed to <strong>model language</strong> by predicting the next word. This approach was interesting but not overly useful for complex tasks.</p>
+
+<h3>Paradigm 2: Harmless, Honest, and Helpful Models</h3>
+
+<p>We then introduced an objective to make models <strong>honest, harmless, and helpful</strong>. By rewarding outputs that met these criteria, we got answers that weren't just probable but also aligned with desired behaviors. This led to models like <strong>ChatGPT</strong>.</p>
+
+<h3>Paradigm 3: Rewarding Correct Answers</h3>
+
+<p>Now, with 01, we're entering <strong>Paradigm 3</strong>: we want to reward answers that are <strong>objectively correct</strong>. We're not discarding the previous objectives but adding a new layer on top.</p>
+
+<h2>How 01 Achieves Better Reasoning</h2>
+
+<h3>Generating Chains of Thought</h3>
+
+<p>We can prompt models to generate a <strong>chain of thought</strong> by asking them to "think step by step". While this has been known for a few years, 01 takes it further.</p>
+
+<h3>Reinforcement Learning with Correct Reasoning Steps</h3>
+
+<p>Instead of feeding the model thousands of human-written reasoning examples, which isn't optimal, we let the model generate its own diverse reasoning paths. We then <strong>select and fine-tune</strong> the model on the outputs that lead to correct answers. This process uses <strong>reinforcement learning</strong> to reward the model for correct reasoning.</p>
+
+<h3>Marriage of Train Time and Test Time Compute</h3>
+
+<p>By combining <strong>train time compute</strong> (fine-tuning on correct outputs) with <strong>test time compute</strong> (allowing the model to think longer), we see significant improvements. Longer chains of thought and training on correct reasoning steps both boost performance, especially in technical domains like mathematics and coding.</p>
+
+<h2>Limitations of the 01 Model</h2>
+
+<h3>Data Limitations</h3>
+
+<p>The model is still <strong>limited by its training data</strong>. If the information isn't in the data, the model can't produce correct answers. It's like a librarian who can only retrieve books available in the library.</p>
+
+<h3>Domains Without Clear Correct Answers</h3>
+
+<p>In domains where there are <strong>no clearly correct or incorrect answers</strong>, the model struggles. Without a way to sift through chains of thought and fine-tune on correct ones, performance doesn't improve as dramatically.</p>
+
+<h2>Is This Real Reasoning?</h2>
+
+<h3>The Librarian Analogy</h3>
+
+<p>Some question whether this counts as human-like intelligence. The model is like a librarian bringing us information. It may not <strong>understand</strong> the content, but it can be highly effective in retrieving correct answers.</p>
+
+<h3>Does It Matter?</h3>
+
+<p>Whether or not the model truly <strong>reasons</strong> like a human may not ultimately matter. The important point is that it's achieving better results in many domains.</p>
+
+<h2>Looking Ahead</h2>
+
+<p>The techniques used in 01 represent a shift from memorizing answers to <strong>memorizing reasoning</strong>. This approach could be extended to other modalities beyond text, like <strong>video generation</strong>. However, we still need new ideas for achieving <strong>artificial general intelligence</strong>.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>The 01 preview signals a significant advancement in language models by focusing on rewarding correct reasoning. By allowing models to generate diverse reasoning paths and fine-tuning on those that lead to correct answers, we've achieved notable improvements. While limitations remain, especially in data and domains without clear answers, this represents an exciting step forward in AI development.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
