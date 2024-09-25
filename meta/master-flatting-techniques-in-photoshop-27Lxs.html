@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">Master Flatting Techniques in Photoshop</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>Today, I'm going to talk about <strong>flatting</strong> - what it is, why it's important, how a colorist uses flats, and some of the basics, tips, and tricks to help speed up your process. <strong>Flatting</strong> is an essential step in digital coloring, providing a base for selecting and adjusting colors easily.</p>
+
+<p>Regardless of how I flat or what I say about flatting, this is just <strong>my way of flatting</strong>. I know other people who flat completely differently, and that's okay. It's all about personal preferences or what the colorist you're working with prefers if you're flatting for someone else.</p>
+
+<p>I started out as a flatter for someone else in a studio. There were a bunch of us, and we would work on various projects. Some artists still did <strong>hand guides</strong> traditionally with markers or watercolors, and they would send those guides to people who knew how to use Photoshop. We'd translate those hand guides into digital files, sometimes entering specific color codes or eyeballing the colors.</p>
+
+<p>Now, digital tools are just tools. Younger generations had access to tablets early on. I don't think I touched a tablet until I was in my mid-20s. When I started coloring, it was with a mouse. It's nice that digital tools have come so far.</p>
+
+<h2>Tools and Settings</h2>
+
+<h3>Lasso Tool</h3>
+
+<p>The most basic tool used for flatting is the <strong>lasso tool</strong>. I prefer to have mine set to the <strong>polygonal lasso</strong> by default. It lets you do straight lines, or if you hold <strong>Option</strong> (Mac) or <strong>Alt</strong> (Windows), you can use it like the free lasso and make freehand lines. </p>
+
+<p>The difference for me is that if you're using the regular lasso tool and you get distracted and let go, it closes the selection. With the polygonal lasso, if you let go, the selection remains open, allowing you to continue where you left off. This is especially helpful if someone calls your name or you get a phone call while flatting.</p>
+
+<p>Another important feature is that you can start a selection and combine straight lines with freehand curves by holding <strong>Alt</strong> or <strong>Option</strong>. You can close the selection whenever you feel like it.</p>
+
+<h3>Anti-Aliasing Settings</h3>
+
+<p>On all selection tools, it's important to make sure that the <strong>anti-alias</strong> box is <strong>unchecked</strong>. If you have anti-aliasing checked on and you make a selection, the edges won't be clean. When you go back to color, selecting that area won't be precise because of the fuzzy edges created by anti-aliasing.</p>
+
+<p>This applies to all selection tools like the <strong>lasso</strong>, <strong>magic wand</strong>, and <strong>elliptical marquee</strong> tool. When anti-aliasing is unchecked, your selections will have hard, clean edges, making it easier to select and fill areas without any artifacts or gaps between colors.</p>
+
+<p>Here's an example of the difference:</p>
+
+<ul>
+
+<li><strong>Anti-aliasing on</strong>: Edges are not clean. There are fuzzy edges and gradients between colors.</li>
+
+<li><strong>Anti-aliasing off</strong>: Edges are hard and clean. Colors butt up against each other without any unwanted gaps.</li>
+
+</ul>
+
+<p>Always ensure that <strong>anti-aliasing is unchecked</strong> in your selection tools when flatting.</p>
+
+<h3>Magic Wand Tool</h3>
+
+<p>The <strong>magic wand</strong> can be useful for flatting in certain situations. It recognizes the information in the file, like the line art, and can select enclosed areas. If the area you're selecting is completely enclosed by line art without any gaps, you can use the magic wand to select it quickly.</p>
+
+<p>When using the magic wand:</p>
+
+<ul>
+
+<li><strong>Uncheck anti-aliasing</strong>.</li>
+
+<li><strong>Set tolerance</strong> (I usually set it to 2).</li>
+
+<li><strong>Check contiguous</strong> (if you want to select continuous areas).</li>
+
+<li>Use <strong>sample all layers</strong> if needed.</li>
+
+</ul>
+
+<p>However, when you use the magic wand, you'll notice that it selects up to the line art but doesn't go under it. This can leave ugly little gaps if you fill the area directly. To fix this, you need to <strong>expand your selection</strong>.</p>
+
+<h4>Expanding Selections</h4>
+
+<p>After selecting an area with the magic wand, you can expand the selection to ensure that it goes under the line art:</p>
+
+<ol>
+
+<li>Go to <strong>Select &gt; Modify &gt; Expand</strong>.</li>
+
+<li>Expand by <strong>1 or 2 pixels</strong>, depending on the thickness of the line art.</li>
+
+<li>This ensures that the edge of your selection falls under the black line art, hiding any gaps.</li>
+
+</ol>
+
+<p>It's helpful to create an <strong>action</strong> in Photoshop to expand the selection quickly.</p>
+
+<h3>Marquee Tool</h3>
+
+<p>The <strong>marquee tool</strong> can be used to quickly grab large areas or straight panel borders. The rectangular marquee doesn't have an anti-aliasing option since it creates straight lines, but the elliptical marquee does. Make sure to <strong>uncheck anti-aliasing</strong> when using the elliptical marquee tool for flatting.</p>
+
+<h3>Pencil Tool</h3>
+
+<p>The <strong>pencil</strong> tool is an alternative to the brush tool for flatting. Unlike the brush, which always has anti-aliasing and soft edges, the pencil tool has hard edges without anti-aliasing. This makes it useful for flatting because it allows you to paint hard-edged areas quickly.</p>
+
+<p>I sometimes use the pencil tool instead of the lasso for certain areas. It's a bit more forgiving and can be faster in some cases.</p>
+
+<h2>Techniques and Tips</h2>
+
+<h3>Avoiding Duplicating Work</h3>
+
+<p>When flatting, you want to avoid duplicating your efforts. If you've already outlined the shape of something, there's no reason to retrace that shape when flatting near it. You can simply select over it and then <strong>minus it out</strong> from your selection.</p>
+
+<p>For example, if you're flatting the water and then move on to the foliage above it, you can:</p>
+
+<ol>
+
+<li>Select the foliage area with the lasso tool.</li>
+
+<li><strong>Minus out</strong> the water by holding <strong>Alt</strong> (Windows) or <strong>Option</strong> (Mac) while clicking on the water area with the magic wand.</li>
+
+<li>Fill the selection with the desired color.</li>
+
+</ol>
+
+<p>This ensures that your new color butts up against the existing color without any gaps.</p>
+
+<h4>Using Add and Subtract Selection</h4>
+
+<ul>
+
+<li><strong>Adding to a selection</strong>: Hold <strong>Shift</strong> while using a selection tool.</li>
+
+<li><strong>Subtracting from a selection</strong>: Hold <strong>Alt</strong> (Windows) or <strong>Option</strong> (Mac).</li>
+
+<li><strong>Intersecting selections</strong>: Hold <strong>Shift</strong> and <strong>Alt</strong> (Windows) or <strong>Shift</strong> and <strong>Option</strong> (Mac).</li>
+
+</ul>
+
+<p>These shortcuts help speed up your workflow and make selecting areas more efficient.</p>
+
+<h3>Using Actions</h3>
+
+<p>In Photoshop, you can create <strong>actions</strong> for repetitive tasks to speed up your workflow. For example:</p>
+
+<ul>
+
+<li><strong>Fill with foreground color</strong>: Set up an action to quickly fill a selection with the foreground color.</li>
+
+<li><strong>Expand selection</strong>: Create an action to expand your selection by 1 or 2 pixels.</li>
+
+</ul>
+
+<p>Assign these actions to keyboard shortcuts or function keys for quick access. This reduces the time spent navigating menus and increases efficiency.</p>
+
+<h3>Simplifying Flats</h3>
+
+<p>Sometimes simplicity is better for the colorist. If there are a lot of intricate elements, especially in small areas, flattening every little piece can make it more work for the colorist. Look for places to <strong>simplify</strong>, especially if the details won't be noticeable in the final image.</p>
+
+<p>For example, if there are stickers on a scooter in the background, you might not need to flat every tiny detail on the stickers. Simplify the area to a few colors that represent the overall design.</p>
+
+<h3>Organizing Workflow</h3>
+
+<p>When faced with complex images, it can be helpful to approach flatting in an organized way:</p>
+
+<ul>
+
+<li><strong>Work from background to foreground</strong>: Start with large background elements and move forward.</li>
+
+<li><strong>Focus on one element at a time</strong>: This prevents you from feeling overwhelmed by the number of shapes and elements.</li>
+
+<li><strong>Use group selections</strong>: Select large areas and then minus out elements you've already flatted.</li>
+
+</ul>
+
+<p>By breaking down the image into manageable sections, you can maintain focus and efficiency.</p>
+
+<h3>Dealing with Complex Elements</h3>
+
+<p>For intricate designs or areas where elements overlap, you may need to make creative decisions about where one element ends and another begins. Try to make shapes in your flats that are in keeping with what the artist has drawn.</p>
+
+<p>In some cases, you might use the lasso tool or the pencil tool to carefully define these areas. Using the pencil tool can be more forgiving and allow for quicker adjustments.</p>
+
+<h2>Final Thoughts</h2>
+
+<p>Flatting can be an incredibly laborious and painful process, especially when you're starting out. It gets faster as you learn how you like to work, get more familiar with your tools, and set up actions to streamline your workflow.</p>
+
+<p>Remember, this is just <strong>my way of flatting</strong>. Others may have different methods, and that's okay. It's up to your personal preferences or the colorist you're working with if you're flatting for someone else. Take what works for you and develop your own process.</p>
+
+<p>There are times when I look at a complex page and think, "This is why I pay someone to flat." But whether you do it yourself or hire someone, understanding the flatting process is essential for efficient and effective digital coloring.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
