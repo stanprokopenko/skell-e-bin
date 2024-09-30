@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">Why did OpenAI move from Next.js to Remix?</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<h2>Understanding the Shift</h2>
+
+<p>Recently, ChatGPT moved from <strong>Next.js</strong> to <strong>Remix</strong>, and everyone’s wondering why. I was curious too, so I spent some time digging into their codebase and observing how they’re using Remix.</p>
+
+<h2>Client-Side Rendering Focus</h2>
+
+<p>One thing I noticed is that ChatGPT’s application is almost entirely <strong>client-rendered</strong>. Instead of server-rendering HTML and sending it to the browser, most of the interaction and rendering happens on the client side. When you visit a page, the server provides minimal HTML, mainly meta tags, link tags for preloading images, and some preloaded JavaScript.</p>
+
+<p>They include a nifty little script to handle the color scheme, preventing the flash of light mode before dark mode loads. This script runs before any other JavaScript, ensuring a smooth visual experience.</p>
+
+<h2>Data Loading with Loaders</h2>
+
+<p>Remix offers a fantastic feature called <strong>loaders</strong>, which provide data to a route during rendering. On the initial render, ChatGPT collects all the necessary data, about <strong>7,000 lines of JSON</strong>, and embeds it directly into the page via a <code>window.__remixContext</code> variable. This way, the application doesn't need to fetch data after loading, resulting in faster initial load times.</p>
+
+<h2>Efficient Routing and Navigation</h2>
+
+<p>With about <strong>60 routes</strong>, ChatGPT benefits from Remix's robust routing system, inherited from React Router. When navigating between pages, like exploring different GPTs, the application handles everything on the client side. It fetches necessary data via API calls without reloading the page, providing a smooth user experience.</p>
+
+<h2>Backend and Infrastructure</h2>
+
+<p>ChatGPT's backend API is separate from the Remix application. They use <strong>Envoy</strong> as a proxy server, likely hosting their servers in-house. The Remix server itself runs on <strong>Express</strong> and uses <strong>Azure</strong> for their CDN. They're also using <strong>Tailwind</strong> for styling.</p>
+
+<p>Interestingly, they don't seem to utilize Remix's <strong>actions</strong>, which handle server-side form submissions and data mutations. Their focus is on client-side rendering and data fetching.</p>
+
+<h2>Advantages of Remix and Vite</h2>
+
+<p>One likely reason for the switch is that <strong>Remix runs on Vite</strong>, which is incredibly lightweight and offers a fast development experience. In contrast, Next.js runs on Webpack, which can be heavier and sometimes introduces complexities during development.</p>
+
+<h2>Why Remix Fits Their Needs</h2>
+
+<p>Given that ChatGPT isn't just a website, they have APIs, iOS apps, and desktop applications, the flexibility of Remix makes sense. Their application doesn't need the heavy server-rendering capabilities of Next.js. Instead, they benefit from Remix's efficient client-side rendering and excellent data handling with loaders.</p>
+
+<h2>My Takeaway</h2>
+
+<p>In my opinion, ChatGPT moved to Remix because it better suits their client-side focused application. Remix provides a great router, efficient data loading, and runs on Vite, offering a smoother development experience. While Next.js is powerful, Remix seems to align better with their specific needs.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
