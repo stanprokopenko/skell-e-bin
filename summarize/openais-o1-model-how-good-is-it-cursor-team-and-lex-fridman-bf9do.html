@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">OpenAI's o1 model: How good is it? | Cursor Team and Lex Fridman</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<h2>The Limits of Scaling Pre-training</h2>
+
+<p>As we scale up pre-training with more data and larger models, we hit data and compute walls. It's harder to continue this approach to improve model performance. We need alternatives to enhance models without excessive training costs.</p>
+
+<h2>The Role of Test-Time Compute</h2>
+
+<p><strong>Test-time compute</strong> is an exciting avenue. By increasing inference-time computation, we can improve performance without training larger models. Running existing models longer can achieve results similar to much larger models. This is efficient for handling the small percentage of queries requiring high intelligence without always using massive models.</p>
+
+<h2>Determining Necessary Intelligence Levels</h2>
+
+<p>Figuring out which problems need more compute is an open research problem. We don't yet know how to dynamically decide when to use a more powerful model. The <strong>model routing problem</strong> remains unsolved, and we face challenges in determining if a query is too hard for a smaller model.</p>
+
+<h2>Outcome vs. Process Reward Models</h2>
+
+<p>We differentiate between <strong>outcome reward models</strong> and <strong>process reward models</strong>. Outcome reward models grade the final output, while process reward models evaluate the <strong>chain-of-thought</strong>. Process reward models can potentially guide tree search by grading each reasoning step, allowing us to explore multiple paths and improve decision-making.</p>
+
+<h2>The Mystery of OpenAI's Techniques</h2>
+
+<p>OpenAI's methods for test-time compute and chain-of-thought remain largely unknown. There are hints from research papers, but we don't know exactly how they implement these techniques. This lack of information makes it challenging to replicate or build upon their work.</p>
+
+<h2>Hiding the Chain-of-Thought</h2>
+
+<p>OpenAI hides the chain-of-thought from users, summarizing it instead. This may prevent competitors from distilling capabilities from their models. Access to the chain-of-thought could make it easier to replicate advanced models, so hiding it protects proprietary methods.</p>
+
+<h2>Integrating Advanced Models into Tools</h2>
+
+<p>Integrating models like OpenAI's latest into tools presents challenges. These models don't stream outputs, making it hard to supervise generation. We're still learning how to use them effectively and haven't found ways to integrate them seamlessly into daily workflows.</p>
+
+<h2>The Future of Test-Time Compute and Search</h2>
+
+<p>Test-time compute and search are in early stages. We expect significant improvements as we develop better training strategies and techniques. Alongside scaling pre-training, enhancing test-time compute will play a crucial role in advancing AI capabilities.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
