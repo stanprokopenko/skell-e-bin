@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">Vercel's new thing is actually great (the haters agree)</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>Turns out <strong>servers are pretty good</strong>. They're so good that <strong>Vercel decided to add them to their serverless functions</strong>. Wait, what? Let me explain.</p>
+
+<p>Vercel recently introduced <strong>in-function concurrency</strong> to their serverless functions, enabling them to handle multiple requests concurrently. This is a big deal, and I'm excited to dive into why this matters and how it works.</p>
+
+<h2>Understanding Serverless and Node.js Concurrency</h2>
+
+<p>To appreciate this update, it's important to understand how serverless functions and Node.js handle concurrency.</p>
+
+<p><strong>Serverless functions</strong>, like AWS Lambda, traditionally map <strong>one function instance to one invocation</strong>. That means each request spins up its own instance, handles the request, and then shuts down. This model simplifies scaling and isolates each request but can be inefficient, especially when functions spend time waiting on I/O operations.</p>
+
+<p>On the other hand, <strong>Node.js was built for high concurrency</strong>. It uses an <strong>event loop</strong> and <strong>asynchronous I/O</strong> to handle multiple requests concurrently in a single process. While one request is waiting on an external operation, Node.js can process other requests, making efficient use of available resources.</p>
+
+<h2>The Problem with Traditional Serverless Functions</h2>
+
+<p>In the traditional serverless model, the benefits of Node.js's concurrency are lost. Since each function instance handles only one request, we can't leverage the event loop to manage multiple requests concurrently. This leads to inefficiencies:</p>
+
+<ul>
+
+<li><strong>Idle time</strong>: When a function waits for a backend response, the instance sits idle, wasting compute resources.</li>
+
+<li><strong>Increased costs</strong>: You're billed for the total time each instance runs, even when it's idle, leading to higher costs.</li>
+
+<li><strong>Connection limits</strong>: Each function instance might establish its own database connections, quickly hitting limits and causing performance issues.</li>
+
+</ul>
+
+<h2>Vercel's In-Function Concurrency: How It Works</h2>
+
+<p>Vercel's new <strong>in-function concurrency</strong> changes the game. Now, a single serverless function instance can handle <strong>multiple invocations concurrently</strong>. Here's how they did it:</p>
+
+<ul>
+
+<li><strong>Rewriting the function runtime in Rust</strong>: This improved performance and allowed better control over function instances.</li>
+
+<li><strong>Implementing a function invocation service</strong>: This service manages connections and routes requests to available instances.</li>
+
+<li><strong>Enabling multiple requests per instance</strong>: While one request waits on I/O, the function instance can process other requests.</li>
+
+</ul>
+
+<p>This approach brings the concurrency benefits of Node.js back into serverless functions.</p>
+
+<h2>Benefits of In-Function Concurrency</h2>
+
+<p>The advantages of in-function concurrency are substantial:</p>
+
+<ul>
+
+<li><strong>Improved efficiency</strong>: By utilizing idle compute time, function instances do more work without additional resources.</li>
+
+<li><strong>Reduced costs</strong>: Customers have reported <strong>20–50% reductions in compute usage and costs</strong>.</li>
+
+<li><strong>Better utilization of Node.js</strong>: We can finally fulfill Node.js's original purpose, handling asynchronous I/O concurrently, even in serverless environments.</li>
+
+</ul>
+
+<p>For example, if two requests each take 100 milliseconds, with 50 milliseconds spent waiting on I/O, a traditional serverless model would use 200 milliseconds of compute time. With in-function concurrency, they can be handled in about 100 milliseconds total.</p>
+
+<h2>Trade-offs and Considerations</h2>
+
+<p>There are some trade-offs to be aware of:</p>
+
+<ul>
+
+<li><strong>Potential increased latency for CPU-bound workloads</strong>: If your functions are CPU-intensive and spend little time waiting on I/O, concurrency might not provide benefits and could even increase latency.</li>
+
+<li><strong>State management</strong>: Functions now handle multiple requests concurrently, so any shared state must be managed carefully to avoid conflicts.</li>
+
+<li><strong>Backward compatibility</strong>: While most applications should work without changes, code that assumes a single request per instance might need adjustment.</li>
+
+</ul>
+
+<p style="text-align: center;">* * *</p>
+
+<p>Vercel's introduction of <strong>in-function concurrency</strong> to their serverless functions is a significant step forward. By combining the scalability of serverless with the efficiency of Node.js's concurrency model, we can build more efficient applications without changing our code.</p>
+
+<p>Whether you're running server-rendered web pages, APIs, or AI applications, this update can lead to substantial cost savings and performance improvements. It's exciting to see innovations like this that help us build better, more efficient applications.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
