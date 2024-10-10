@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">Why Web Components Failed</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>I've been asked why I'm still using React when the browser now supports components, shouldn't everyone be using web components? Well, there's a reason why web components aren't gaining traction, and I'm not alone in thinking this. Notable figures like Rich Harris, the creator of Svelte, and Ryan Carniato, the creator of SolidJS, have expressed strong criticisms of web components.</p>
+
+<h2>Web Components Pose Significant Challenges</h2>
+
+<p>Ryan recently wrote an article titled <strong>"Web Components Are Not the Future,"</strong> where he outlines the issues with web components. He acknowledges that while they promise interoperability and future-proofing, in reality, they introduce complexity and performance overheads. He even suggests that web components could <strong>"possibly pose the biggest risk to the future of the web"</strong> that he can see.</p>
+
+<h2>Elements Are Not Components</h2>
+
+<p>Web components are built on custom elements, but <strong>elements are not the same as components</strong>. Elements are a subset of components. Forcing every interface through the DOM with custom elements leads to problems. There are inconsistencies with attributes and properties, attributes accept only strings, while properties can handle any value. This mismatch complicates templating and requires additional prefixes or special handling in frameworks.</p>
+
+<h2>Standardization Limits Innovation</h2>
+
+<p>Standardizing high-level mechanisms like web components can stifle future innovation. Once something becomes a web standard, it's difficult to change. If the standard makes too many assumptions, it can prevent exploring alternative solutions. Ryan points out that <strong>"the introduction of higher-level primitives can have a positive effect,"</strong> but warns that <strong>"it can have a negative effect if too many assumptions are made."</strong></p>
+
+<h2>Performance Overhead and Complexity</h2>
+
+<p>Using web components introduces performance overhead due to the extra abstraction layer. They can negatively impact server-side rendering (SSR) because they rely on the DOM, which isn't present on the server. Frameworks have to implement workarounds, increasing the complexity and size of the codebase. This added complexity is a <strong>hidden tax</strong> that affects both developers and users.</p>
+
+<h2>The Community Consensus</h2>
+
+<p>The challenges aren't isolated incidents. Framework authors across the board have struggled with web components. Even React, which once considered web components, faced difficulties integrating them. The consensus among experienced developers is that web components may not be the ideal path forward.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>While the idea of web components is appealing, creating reusable, interoperable components that work across different frameworks, the reality is that they introduce significant challenges. They complicate development, impose performance costs, and can hinder future innovation due to their rigid standardization. As Ryan puts it, **"Web components are compromised through and through." ** It's time we acknowledge these issues and focus on solutions that truly enhance the web development experience.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
