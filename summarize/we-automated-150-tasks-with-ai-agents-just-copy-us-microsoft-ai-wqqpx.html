@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">“We automated 150 tasks with AI Agents, just copy us” - Microsoft AI</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>In this article, we explore how AI agents can automate real tasks in computing environments. We discuss the Windows Agent Arena, a benchmark developed to test AI agents on real-world tasks within the Windows operating system. We dive into the challenges and future of AI agents, the impact of advanced reasoning models, and the role of open-source development.</p>
+
+<h2>What Are AI Agents?</h2>
+
+<p>Traditional language model-driven applications are often static. We provide a prompt or question, and the language model responds. This process requires continuous prompting from the user. AI agents, however, aim to act <strong>autonomously</strong>. We give the agent a task, and it interprets and carries out the task <strong>without further instructions</strong>.</p>
+
+<h2>Windows Agent Arena: A Benchmark for AI Agents</h2>
+
+<p>Windows Agent Arena is a benchmark designed to test how well AI agents perform real-world tasks in a Windows computing environment. It focuses on <strong>PC-controlling agents</strong> that have access to the full array of applications commonly installed on Windows.</p>
+
+<p>Agents in this benchmark are evaluated on their ability to:</p>
+
+<ul>
+
+<li><strong>Reason</strong>: Interpret the given task.</li>
+
+<li><strong>Plan</strong>: Develop a strategy to accomplish the task.</li>
+
+<li><strong>Act</strong>: Execute the necessary steps autonomously.</li>
+
+</ul>
+
+<p>The benchmark includes over 150 tasks that represent common user activities on Windows.</p>
+
+<h3>Measuring Agent Performance</h3>
+
+<p>Measuring AI agent performance is crucial. We cannot improve what we cannot measure. Windows Agent Arena provides a standardized environment to test agents on practical tasks, offering insights into their capabilities and limitations.</p>
+
+<h2>Demonstrating Windows Agent Arena</h2>
+
+<p>Agents perform tasks by interacting with the Windows environment. For example, an agent might be tasked to <strong>"Install the Python extension in VS Code"</strong> or <strong>"Enable the Do Not Track feature in Edge to enhance my online privacy."</strong> The agent must plan the steps, execute actions, and adjust based on the system's responses.</p>
+
+<h3>Example Task: Changing an Edge Profile Name</h3>
+
+<p>An agent receives the task: <strong>"Change my Edge profile name to Thomas."</strong></p>
+
+<ul>
+
+<li>The agent plans the steps needed to accomplish the task.</li>
+
+<li>It interacts with the system, navigating through menus.</li>
+
+<li>In this instance, the agent successfully changes the profile name but forgets to delete the original name before typing "Thomas," highlighting the nuances in agent behavior.</li>
+
+</ul>
+
+<h2>The Significance of Practical Benchmarks</h2>
+
+<p>Practical benchmarks like Windows Agent Arena are essential because they reflect real-world use cases. Unlike benchmarks that focus on language model memorization, this benchmark evaluates agents on tasks that average users care about, what the AI can do for them in practical settings.</p>
+
+<h2>Challenges and Future of AI Agents</h2>
+
+<h3>Working with Less Common Applications</h3>
+
+<p>A significant challenge is enabling agents to work with applications that are not pre-programmed or widely known. The goal is for agents to handle <strong>unfamiliar software</strong>, adapting to various interfaces and functions.</p>
+
+<h3>Human Performance Comparison</h3>
+
+<p>The <strong>human success rate</strong> on Windows Agent Arena tasks is about <strong>74%</strong> for casual Windows users. This sets a benchmark for agents to aim for. While current agent performance is lower, any improvement brings us closer to practical, widespread use.</p>
+
+<h3>Deployment Considerations</h3>
+
+<p>For AI agents to be adopted mainstream, they need to achieve high success rates and ensure safety and robustness. There must be ways for humans to intervene and work collaboratively with agents.</p>
+
+<h2>The Role of Open Source in AI Development</h2>
+
+<p>Open-source development plays a crucial role in advancing AI agent capabilities. Open-source models allow the community to contribute, innovate, and customize agents for specific needs. The coexistence of open-source and closed-source models drives competition and accelerates progress.</p>
+
+<h2>The Impact of Advanced Reasoning Models</h2>
+
+<p>Advanced reasoning models, like <strong>O1</strong>, have the potential to enhance AI agent performance by enabling deeper reasoning and planning. These models can think for longer periods, considering more complex scenarios before acting.</p>
+
+<h3>Balancing Efficiency</h3>
+
+<p>However, increased reasoning can lead to longer processing times and higher computational costs. There is a trade-off between depth of reasoning and efficiency. Agents need to decide when extensive reasoning is necessary and when simpler responses suffice.</p>
+
+<h2>Interaction Modalities with AI Agents</h2>
+
+<p>We may interact with AI agents through various modalities:</p>
+
+<ul>
+
+<li><strong>Chat</strong>: Text-based interaction.</li>
+
+<li><strong>Voice</strong>: Spoken commands and responses.</li>
+
+<li><strong>Prompts and Notifications</strong>: Agents proactively reminding us or suggesting actions.</li>
+
+</ul>
+
+<p>The ideal medium depends on the task and user preference. Multimodal interaction allows agents to assist in diverse situations, such as hands-free scenarios like cooking or when accessibility is a concern.</p>
+
+<h2>Accessibility and Multimodality</h2>
+
+<p>Incorporating multiple modalities enhances accessibility. For users with impairments, voice or visual inputs might be more suitable. Multimodal agents can process audio, visual, and text information, creating a more inclusive and efficient user experience.</p>
+
+<h2>Using Windows Agent Arena</h2>
+
+<p>Windows Agent Arena is open-source and available on GitHub. Developers can:</p>
+
+<ul>
+
+<li><strong>Run the benchmark</strong> to test their agents on standardized tasks.</li>
+
+<li><strong>Contribute</strong> by adding new tasks that represent common user activities.</li>
+
+<li><strong>Develop custom agents</strong> and compare their performance against the benchmark.</li>
+
+</ul>
+
+<h3>Getting Started</h3>
+
+<p>To use Windows Agent Arena:</p>
+
+<ol>
+
+<li><strong>Visit the GitHub repository</strong> and follow the setup instructions.</li>
+
+<li><strong>Prepare the environment</strong>, which includes certain prerequisites.</li>
+
+<li><strong>Run the benchmark</strong>, which can be parallelized to handle multiple tasks efficiently.</li>
+
+<li><strong>Extend the benchmark</strong> by adding new tasks or fine-tuning existing ones.</li>
+
+<li><strong>Test and iterate</strong> on your agent's performance, leveraging the benchmark's scalability.</li>
+
+</ol>
+
+<p style="text-align: center;">* * *</p>
+
+<p>AI agents have the potential to automate real tasks and enhance productivity. Benchmarks like Windows Agent Arena are crucial for measuring progress and guiding development. By understanding the challenges and advancing multimodal interactions, we move closer to a future where AI agents are seamlessly integrated into our daily workflows.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
