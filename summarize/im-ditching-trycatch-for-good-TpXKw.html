@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">I'm Ditching Try/Catch for Good!</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p><strong>Promises</strong> and <strong>async/await</strong> in JavaScript are amazing, but they can be tricky when it comes to <strong>error handling</strong>. Using <strong>try/catch</strong> blocks often leads to messy code and unexpected errors. In this article, I'll show you how to fix these problems and make error handling cleaner and more predictable.</p>
+
+<h2>The Problem with <strong>Try/Catch</strong></h2>
+
+<p>Consider this example:</p>
+
+<p>```javascript
+
+async function getUser(id) {
+
+    await wait(1000), // Simulate an API call
+
+    if (id === 2) throw new Error('User does not exist')
+
+    return { id, name: 'Kyle' }
+
+}</p>
+
+<p>const user = await getUser(1),
+
+console.log(user),
+
+```</p>
+
+<p>This code works fine when <code>id</code> is not <code>2</code>. However, if we pass <code>2</code>, it throws an error. To handle this, we typically wrap the code in a <strong>try/catch</strong> block:</p>
+
+<p><code>javascript
+
+try {
+
+    const user = await getUser(2), 
+
+    console.log(user),
+
+} catch (error) {
+
+    console.error('There was an error,', error.message);
+
+}</code></p>
+
+<p>But there's a problem. Any error inside the <strong>try</strong> block, even a typo, will be caught by the <strong>catch</strong> block. This makes it hard to distinguish between expected errors and unexpected ones. Additionally, we need to move all code that uses <code>user</code> inside the <strong>try</strong> block, which isn't ideal.</p>
+
+<h2>Simplifying with a <strong>Utility Function</strong></h2>
+
+<p>To fix this, I wrote a simple <strong>catchError</strong> function:</p>
+
+<p><code>javascript
+
+async function catchError(promise) {
+
+    try {
+
+    const data = await promise,
+
+    return [null, data]
+
+    } catch (error) {
+
+    return [error]
+
+    }
+
+}</code></p>
+
+<p>Now, we can use it like this:</p>
+
+<p>```javascript
+
+const [err, user] = await catchError(getUser(2))</p>
+
+<p>if (err) {
+
+    console.error('There was an error', err.message);
+
+} else {
+
+    console.log(user), 
+
+}
+
+```</p>
+
+<p>This approach has several benefits:</p>
+
+<ul>
+
+<li><strong>Flattened code</strong>: No need for nested <strong>try/catch</strong> blocks.</li>
+
+<li><strong>Clear error handling</strong>: Only errors from <code>getUser</code> are caught.</li>
+
+<li><strong>No variable hoisting</strong>: We don't need to declare <code>user</code> outside of a block.</li>
+
+</ul>
+
+<h2>Handling Specific Error Types</h2>
+
+<p>Sometimes, we only want to catch <strong>specific errors</strong>. For this, I created a <strong>catchErrorTyped</strong> function:</p>
+
+<p><code>javascript
+
+async function catchErrorTyped(promise, errorTypes = []) {
+
+    try {
+
+const data = await promise,
+
+    return [null, data]
+
+    } catch (error) {
+
+    if (errorTypes.some((type) =&gt; error instanceof type)) {
+
+      return [error]
+
+    }
+
+    throw error,
+
+    }
+
+}</code></p>
+
+<p>And a custom error class:</p>
+
+<p><code>javascript
+
+class CustomError extends Error {
+
+    constructor(message) {
+
+    super(message), 
+
+this.name = 'CustomError'
+
+    }
+
+}</code></p>
+
+<p>Now, we can catch only <strong>CustomError</strong> types:</p>
+
+<p>```javascript
+
+const [err, user] = await catchErrorTyped(getUser(2), [CustomError]),</p>
+
+<p>if (err) {
+
+    console.error('Custom error,', err.message);
+
+} else {
+
+    console.log(user), 
+
+}
+
+```</p>
+
+<p>In this case, if <code>getUser</code> throws a <strong>CustomError</strong>, it gets caught. Other errors will bubble up as usual. This helps us handle <strong>expected errors</strong> while letting unexpected errors fail loudly.</p>
+
+<h2>Advanced Error Handling with Libraries</h2>
+
+<p>For more robust error handling, you might consider libraries like <strong>Effect</strong>. It treats errors as first-class citizens and offers advanced features. However, it's a large library and might be overkill for simple use cases.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>By using utility functions like <strong>catchError</strong> and <strong>catchErrorTyped</strong>, we can improve error handling in JavaScript asynchronous code. This approach leads to cleaner code, better separation of error handling, and fewer unexpected catches. It's a simple yet effective way to manage errors without the pitfalls of traditional <strong>try/catch</strong> blocks.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
