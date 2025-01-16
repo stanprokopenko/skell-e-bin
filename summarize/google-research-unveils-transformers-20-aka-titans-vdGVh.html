@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">Google Research Unveils "Transformers 2.0" aka TITANS</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<h2>The Limitations of Transformers</h2>
+
+<p>Transformers revolutionized AI with their <strong>attention mechanism</strong>. They excel at sequence modeling and in-context learning. However, they have a major drawback: a <strong>limited context window</strong>. As you increase the context length, the computational cost grows <strong>quadratically</strong>. This makes it difficult for Transformers to handle long sequences efficiently.</p>
+
+<h2>Introducing Titans</h2>
+
+<p>Google Research has proposed a new approach called <strong>Titans</strong>, aiming to overcome the limitations of Transformers. Titans give AI models <strong>memory</strong> more akin to how <strong>human memory</strong> works, incorporating both <strong>short-term</strong> and <strong>long-term memory</strong> during <strong>inference time</strong>.</p>
+
+<h3>Mimicking Human Memory</h3>
+
+<p>In humans, memory is a fundamental process essential for learning. We have <strong>distinct yet interconnected memory modules</strong>, like short-term memory, long-term memory, and meta-memory. Titans aim to replicate this by designing models that can <strong>memorize</strong> at test time, not just during training.</p>
+
+<h3>The Surprise Mechanism</h3>
+
+<p>A key feature of Titans is the <strong>surprise mechanism</strong>. In human cognition, events that <strong>violate our expectations</strong> are more memorable. Titans measure the <strong>surprise</strong> of an input by calculating its gradient with respect to the model's parameters. <strong>Surprising events</strong> are given more attention and stored in long-term memory, while less surprising information may be forgotten over time through a <strong>decaying mechanism</strong>.</p>
+
+<h2>The Titans Architecture</h2>
+
+<p>Titans consist of three components:</p>
+
+<ul>
+
+<li><strong>Core Memory</strong>: Responsible for the main flow of data (short-term memory).</li>
+
+<li><strong>Long-Term Memory</strong>: Stores and recalls information over extended periods.</li>
+
+<li><strong>Persistent Memory</strong>: Encodes knowledge about the task within the model parameters.</li>
+
+</ul>
+
+<h3>Memory Modules</h3>
+
+<p>Titans use memory modules to manage and retrieve information efficiently. They learn to decide what to <strong>memorize</strong>, what to <strong>forget</strong>, and how to <strong>retrieve</strong> relevant information when needed.</p>
+
+<h3>Three Implementations</h3>
+
+<p>Titans offer three variants with different trade-offs:</p>
+
+<ul>
+
+<li><strong>Memory as Context (Mac)</strong>: Think of this as having a personal assistant who takes notes and provides relevant information when needed.</li>
+
+<li><strong>Memory as Gate (Mag)</strong> - Here, you have two advisors, one focuses on immediate context, and the other draws from long-term experience. A gatekeeper decides how much to listen to each.</li>
+
+<li><strong>Memory as Layer (Mal)</strong>: Information is processed through layers, each refining the data, similar to filtering information through different memory types.</li>
+
+</ul>
+
+<h2>Performance and Results</h2>
+
+<p>Titans outperform Transformers and other models across various benchmarks, particularly with long sequences. They scale effectively to <strong>over 2 million tokens</strong> in the context window, maintaining high accuracy even in <strong>needle-in-a-haystack</strong> tasks where models need to retrieve specific information from vast amounts of data.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>Google's Titans represent a significant advancement in AI modeling by incorporating human-like memory processes. By learning to <strong>memorize at test time</strong> and using the surprise mechanism, Titans offer efficient and scalable solutions for tasks requiring long-term context understanding.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
