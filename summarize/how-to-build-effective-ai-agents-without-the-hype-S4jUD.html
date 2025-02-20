@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">How to Build Effective AI Agents (without the hype)</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>Building effective and reliable AI agents is <strong>really hard</strong>. While the whole world is buzzing about AI agents, even big companies like Apple and Amazon struggle to ship effective AI features due to issues like hallucinations. Many examples online are cool demos, but they often break down in real-world applications. </p>
+
+<p>In this article, I want to share some <strong>practical tips and techniques</strong> for developers to build more effective and reliable AI systems. Let's dive into understanding what AI agents are and explore some core patterns you can use.</p>
+
+<h2>Understanding AI Agents</h2>
+
+<p>Before we can build AI agents, we need to understand what they are. <strong>Different people have different ideas</strong> about AI agents. Often, tutorials online show systems where you make an API call to a large language model (LLM) at some point. But is it fair to call such a system an AI agent?</p>
+
+<p>At Data Lumina, we make a distinction between <strong>workflows</strong> and <strong>agents</strong>, inspired by Anthropic's definitions:</p>
+
+<ul>
+
+<li><strong>Workflows</strong> are systems where LLMs and tools are orchestrated through predefined code paths.</li>
+
+<li><strong>Agents</strong> are systems where LLMs dynamically direct their own processes and tool usage, maintaining control over how they accomplish tasks.</li>
+
+</ul>
+
+<p>As developers, it's crucial to know when to use which pattern. For many applications, optimizing single LLM calls with retrieval and in-context examples is usually enough.</p>
+
+<h2>Core Patterns for AI Systems</h2>
+
+<p>Here are some common building blocks and patterns you can use when building AI systems.</p>
+
+<h3>Augmented LLMs</h3>
+
+<p>An <strong>augmented LLM</strong> is an LLM enhanced with additional capabilities:</p>
+
+<ul>
+
+<li><strong>Retrieval</strong>: Pulling information from external sources like databases or vector databases to provide context.</li>
+
+<li><strong>Tools</strong>: Services or APIs the LLM can call to get more information, like current weather data or shipping updates.</li>
+
+<li><strong>Memory</strong>: Keeping track of past interactions to maintain context during a session.</li>
+
+</ul>
+
+<p>Combining these can take your application beyond being a simple LLM wrapper.</p>
+
+<h3>Workflow Patterns</h3>
+
+<p><strong>Workflow patterns</strong> give you control and predictability in your AI systems.</p>
+
+<ul>
+
+<li><strong>Prompt Chaining</strong>: Chaining together multiple LLM calls, using the output of one as the input for the next. This helps break down complex tasks into manageable steps.</li>
+
+<li><strong>Routing</strong>: Letting the LLM categorize incoming requests and route them through different predefined paths in your application.</li>
+
+<li><strong>Parallelization</strong>: Running independent LLM calls in parallel to speed up processing, useful for tasks like implementing guardrails.</li>
+
+<li><strong>Orchestrator-Worker</strong>: The LLM (orchestrator) decides what actions to take and utilizes workers (functions or services) to perform specific tasks.</li>
+
+<li><strong>Evaluator-Optimizer</strong>: The LLM generates output, which is then evaluated and optimized through additional LLM calls.</li>
+
+</ul>
+
+<h3>Agent Pattern</h3>
+
+<p>The <strong>agent pattern</strong> involves LLMs that dynamically decide actions and iterate based on feedback until they reach a goal. While this pattern allows for sophisticated tasks, it's less predictable and harder to control. For most problems, you don't need this level of complexity.</p>
+
+<h2>Practical Tips for Building Effective AI Systems</h2>
+
+<p>Here are some tips to help you build more reliable AI systems:</p>
+
+<ul>
+
+<li><strong>Be cautious with agent frameworks</strong>: They might not be necessary and can add unnecessary complexity. Learn to build basic components from the ground up.</li>
+
+<li><strong>Prioritize deterministic workflows</strong>: Start simple and focus on creating reliable workflows before moving to agentic patterns.</li>
+
+<li><strong>Beware of scaling challenges</strong>: Scaling from a small demo to a large user base can introduce issues like increased hallucinations and harder-to-manage retrieval systems.</li>
+
+<li><strong>Implement testing and evaluation early</strong>: Set up proper testing from the beginning to systematically improve your system and ensure changes lead to real improvements.</li>
+
+<li><strong>Use guardrails in your application</strong>: Implement checks to ensure the outputs are appropriate before delivering them to users. This helps protect your brand and reputation.</li>
+
+</ul>
+
+<p style="text-align: center;">* * *</p>
+
+<p>Building effective AI systems requires careful planning and understanding of the underlying patterns. By starting simple, focusing on deterministic workflows, and incorporating testing and guardrails, you can develop AI applications that are both powerful and reliable. Remember, you don't always need complex agentic patterns, often a well-designed workflow is all it takes to solve the problem at hand.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
