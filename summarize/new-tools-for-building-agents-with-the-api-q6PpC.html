@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">New tools for building agents with the API</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<h2>Our New Built-in Tools</h2>
+
+<p>We're excited to make it easier for developers to build reliable and useful agents, systems that act independently to perform tasks on your behalf. Today, we're launching three new built-in tools - </p>
+
+<h3>Web Search Tool</h3>
+
+<p>The <strong>Web Search Tool</strong> lets our models access up-to-date, factual information from the internet. It's the same tool powering ChatGPT's search, using a fine-tuned model excellent at retrieving relevant data and citing it clearly.</p>
+
+<h3>File Search Tool</h3>
+
+<p>With the <strong>File Search Tool</strong>, you can upload, chunk, and embed your documents for easy retrieval augmented generation over your data. New features include:</p>
+
+<ul>
+
+<li><strong>Metadata filtering</strong>: Add attributes to your files to filter down to the most relevant ones.</li>
+
+<li><strong>Direct search endpoint</strong>: Directly search your vector stores without model-filtered queries.</li>
+
+</ul>
+
+<h3>Computer Use Tool</h3>
+
+<p>The <strong>Computer Use Tool</strong> (Operator in the API) lets you control computers you're operating, virtual machines or legacy applications without API access. Automate tasks and build applications using this tool, which is powered by the same model as Operator in ChatGPT.</p>
+
+<h2>The Responses API</h2>
+
+<p>To support these tools, we're introducing the <strong>Responses API</strong>. Unlike the earlier Chat Completions API, which was text-in and text-out, the Responses API is flexible, supports multiple turns, and integrates tools seamlessly. It's a powerful way to build agents capable of complex, multi-step workflows.</p>
+
+<h2>Demonstrating the Responses API</h2>
+
+<p>We built a personal stylist assistant to showcase the Responses API. By defining our agent with instructions and adding the File Search and Web Search tools, we could:</p>
+
+<ul>
+
+<li><strong>Summarize user preferences</strong> using the File Search Tool.</li>
+
+<li><strong>Fetch fresh data</strong> from the web with the Web Search Tool.</li>
+
+<li><strong>Handle multiple tool calls</strong> in one API response.</li>
+
+</ul>
+
+<p>Using the Computer Use Tool, we automated purchasing a jacket, demonstrating the API's ability to interact with external systems.</p>
+
+<h2>Introducing the Agents SDK</h2>
+
+<p>Building complex applications often requires multiple agents handling different tasks. To simplify this, we've evolved our experimental <strong>Swarm</strong> SDK into the production-ready <strong>Agents SDK</strong>. With it, you can:</p>
+
+<ul>
+
+<li><strong>Orchestrate multiple agents</strong> for different parts of your application.</li>
+
+<li><strong>Implement handoffs</strong>, transferring conversations between agents while maintaining context.</li>
+
+<li><strong>Monitor and trace</strong> agents with built-in tools.</li>
+
+<li><strong>Add guardrails and lifecycle events</strong> easily.</li>
+
+</ul>
+
+<p>The Agents SDK is open source and available via <code>pip install openai-agents</code>. A JavaScript version is coming soon.</p>
+
+<h2>Looking Ahead</h2>
+
+<p>We'll continue supporting the Chat Completions API with new models and capabilities. Some features will be exclusive to the Responses API, but migrating should be straightforward. We'll add more features to the Responses API to match the Assistance API, provide a migration guide, and plan to sunset the Assistance API in 2026.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>We're thrilled about the possibilities these new tools and APIs offer. <strong>2025 is the year of the agent</strong>. With ChatGPT and our developer tools, agents will move from answering questions to doing things for you in the real world. We're just getting started, and we can't wait to see what you build!</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
