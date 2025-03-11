@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">New tools for building agents with the API</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>OpenAI has introduced a series of new tools and APIs to make it easier for developers to build reliable and useful <strong>agents</strong>. Agents are systems that can act independently to perform tasks on behalf of users. This initiative aims to streamline the development process by providing comprehensive resources under a unified platform.</p>
+
+<h2>New Built-in Tools</h2>
+
+<h3>Web Search Tool</h3>
+
+<p>The <strong>Web Search Tool</strong> allows models to access up-to-date and factual information from the internet. It powers ChatGPT's search functionality and is driven by a fine-tuned model (GPT-4 Turbo or GPT-4 Turbo Mini). This model excels at:</p>
+
+<ul>
+
+<li>Analyzing large amounts of data retrieved from the web.</li>
+
+<li>Identifying relevant pieces of information.</li>
+
+<li>Clearly citing sources in responses.</li>
+
+</ul>
+
+<p>In the SimpleQA benchmark, GPT-4 Turbo achieved a state-of-the-art score of <strong>90%</strong>.</p>
+
+<h3>File Search Tool</h3>
+
+<p>The <strong>File Search Tool</strong> enables developers to upload, chunk, and embed documents, facilitating easy retrieval over these documents. Two new features have been added:</p>
+
+<ul>
+
+<li><strong>Metadata Filtering</strong>: Attach attributes to files for efficient filtering based on query relevance.</li>
+
+<li><strong>Direct Search Endpoint</strong>: Directly search vector stores without filtering queries through the model first.</li>
+
+</ul>
+
+<h3>Computer Use Tool</h3>
+
+<p>The <strong>Computer Use Tool</strong> allows control over computers that developers are operating, including virtual machines and legacy applications without API access. It automates tasks by enabling models to:</p>
+
+<ul>
+
+<li>Operate on graphical user interfaces.</li>
+
+<li>Perform complex multi-step workflows.</li>
+
+</ul>
+
+<p>This tool includes the Computer Use Model, the same model used by <strong>Operator</strong> in ChatGPT. It has received positive feedback and has set state-of-the-art benchmarks on:</p>
+
+<ul>
+
+<li>OSWorld</li>
+
+<li>WebArena</li>
+
+<li>WebVoyager</li>
+
+</ul>
+
+<h2>Introducing the Responses API</h2>
+
+<p>OpenAI has developed the <strong>Responses API</strong> to provide a flexible and robust way to interact with these tools. Unlike the previous Chat Completions API, the Responses API supports:</p>
+
+<ul>
+
+<li>Multiple turns and tool usage.</li>
+
+<li>Multimodal inputs and outputs, including images and audio.</li>
+
+<li>Advanced reasoning capabilities.</li>
+
+</ul>
+
+<h3>Features of the Responses API</h3>
+
+<ul>
+
+<li>Supports built-in tool use.</li>
+
+<li>Allows for complex agentic interactions.</li>
+
+<li>Enhances developer experience with straightforward integration.</li>
+
+</ul>
+
+<h2>The Agents SDK</h2>
+
+<p>To simplify the building of complex applications, OpenAI has launched the open-source <strong>Agents SDK</strong>. This SDK is an evolution of the previously experimental <strong>Swarm</strong> SDK, now made production-ready with added features.</p>
+
+<h3>Key Features</h3>
+
+<ul>
+
+<li><strong>Agent Orchestration</strong>: Manage multiple agents handling different tasks within a single application.</li>
+
+<li><strong>Python Function Integration</strong>: Define tools as regular Python functions with automatic JSON schema generation.</li>
+
+<li><strong>Monitoring and Tracing</strong>: Built-in tracing UI for debugging and monitoring agent interactions.</li>
+
+<li><strong>Handoffs</strong>: Seamlessly switch conversations between agents based on the context and required capabilities.</li>
+
+<li><strong>Guardrails and Lifecycle Events</strong>: Enhance application robustness and manage agent behaviors effectively.</li>
+
+</ul>
+
+<h3>Installation</h3>
+
+<p>The Agents SDK can be installed using:</p>
+
+<p><code>bash
+
+pip install openai-multitool-agents</code></p>
+
+<p>A JavaScript version is also in development.</p>
+
+<h2>Assistance API and Future Plans</h2>
+
+<p>OpenAI acknowledges the contributions of the Assistance API and plans to integrate its capabilities into the Responses API. The key points include:</p>
+
+<ul>
+
+<li><strong>Continued Support</strong>: The Chat Completions API will remain available, supporting new models and capabilities.</li>
+
+<li><strong>Migration Guide</strong>: OpenAI will provide guidance for migrating applications from the Assistance API to the Responses API.</li>
+
+<li><strong>Sunsetting Assistance API</strong>: Plans to Sunset the Assistance API by 2026, with ample time and support for developers to transition.</li>
+
+</ul>
+
+<p style="text-align: center;">* * *</p>
+
+<p>OpenAI's new tools and APIs mark significant advancements in empowering developers to build sophisticated agents. By unifying tools like the Web Search Tool, File Search Tool, and Computer Use Tool under the Responses API, and providing the Agents SDK, developers now have a powerful toolkit to create agents that can perform complex tasks. OpenAI is committed to continuing this development, with 2025 set to be the year agents go from answering questions to performing actions in the real world.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
