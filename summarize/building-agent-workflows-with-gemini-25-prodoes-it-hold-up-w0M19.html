@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">Building Agent Workflows with Gemini 2.5 Pro—Does It Hold Up?</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>I've been experimenting with <strong>Gemini 2.5 Pro</strong>, and it's proving to be an impressive model, especially in terms of <strong>function calling</strong> capabilities. Instead of building games or simple tasks, I decided to test how well it handles function calls, which are crucial for building agents.</p>
+
+<h2>Basic Function Calling</h2>
+
+<p>First, I tested basic function calling. I set up a simple function called <code>get_current_weather</code> that returns dummy weather data based on a given location. By providing a function description in the docstring, the model understood what inputs it needed and how to use the function. When I asked, "What is the weather like in San Francisco?", the model correctly called the function and provided the expected response.</p>
+
+<h2>Parallel Function Calls</h2>
+
+<p>Next, I explored <strong>parallel function calls</strong>, which are useful for practical applications. I added another function, <code>get_population</code>, and wanted the model to use both functions in response to a query. When I asked, "Compare the weather and population of New York and San Francisco," the model successfully executed both function calls and provided a comprehensive answer.</p>
+
+<h2>Building a Text-to-SQL Assistant</h2>
+
+<p>I then ventured into creating a <strong>text-to-SQL assistant</strong>. I set up a SQL database using SQLite with sample employee data. The goal was for the model to convert natural language queries into SQL queries, execute them, and return the results. When I asked, "What are the average salaries by department?", the model generated the correct SQL query, executed it, and provided accurate averages.</p>
+
+<h2>Combining Text-to-SQL with Unstructured Data</h2>
+
+<p>To showcase the real power of a good coding LLM, I combined the text-to-SQL system with parallel function calls to <strong>unstructured data</strong>. I created functions to retrieve news articles and analyze their sentiment. By giving the model access to these tools, it could answer complex queries like, "What is the recent news about Apple and what's the general sentiment?" The model effectively called the appropriate functions, processed the unstructured data, and delivered insightful responses.</p>
+
+<h2>Complex Function Calling Scenarios</h2>
+
+<p>I tested the model with more complex tasks, like <strong>trip planning</strong>. With functions for weather, flights, hotels, currency conversion, and itinerary planning, the model executed multiple function calls, both sequentially and in parallel, to produce a detailed trip plan from a user's complex query.</p>
+
+<p>In another test, I built a <strong>business intelligence dashboard</strong>. The model used functions to access company databases, market data, and perform competitive analysis. By following step-by-step instructions, it executed SQL queries and combined data to provide comprehensive business insights.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>From my testing, <strong>Gemini 2.5 Pro</strong> demonstrates exceptional capabilities in function calling, both basic and advanced. Its ability to handle parallel function calls and integrate structured and unstructured data makes it a powerful tool for building complex agents and workflows. While the API doesn't provide the chain of thought, the model's performance in executing function calls is impressive.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
