@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">Don't do RAG - This method is way faster & accurate...</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>For a long time, large language models (<strong>LLMs</strong>) didn't have real-time data about the world or access to a company's private data. To bring external resources to LLMs, we've traditionally used <strong>Retrieval Augmented Generation (RAG)</strong>. This method involves creating a large knowledge base and retrieving relevant information to include in the LLM's context.</p>
+
+<p>Recently, a new approach called <strong>Cache Augmented Generation (KAG)</strong> has gained popularity. Instead of retrieving portions of data, KAG pre-loads the <strong>entire database into the model's context window</strong>. This method has transformed how I build agents and LLM applications.</p>
+
+<h2>RAG vs. KAG</h2>
+
+<p><strong>RAG</strong> involves:</p>
+
+<ul>
+
+<li>Preparing data by turning it into a vector database.</li>
+
+<li>Splitting data into small chunks.</li>
+
+<li>Using embeddings to search for relevant chunks based on user queries.</li>
+
+<li>Sending the retrieved chunks along with the user's question to the LLM.</li>
+
+</ul>
+
+<p>However, RAG has challenges:</p>
+
+<ul>
+
+<li><strong>Complex setup</strong>: Turning knowledge into a vector database requires effort.</li>
+
+<li><strong>Latency</strong>: Time is spent embedding queries and retrieving chunks.</li>
+
+<li><strong>Retrieval accuracy</strong>: Ensuring the right information is retrieved can be difficult.</li>
+
+</ul>
+
+<p>On the other hand, <strong>KAG</strong>:</p>
+
+<ul>
+
+<li>Pre-loads all data into the LLM's context window.</li>
+
+<li>Eliminates the need for complex retrieval pipelines.</li>
+
+<li>Simplifies code implementation significantly.</li>
+
+</ul>
+
+<h2>The Rise of KAG</h2>
+
+<p>Previously, pre-loading all data didn't make sense due to limited context windows (around 4,000 tokens). Now, models like Google's <strong>Gemini</strong> support context windows up to <strong>2 million tokens</strong>. That's approximately <strong>1.5 million words</strong>, enough to include entire novels like <em>War and Peace</em>.</p>
+
+<p>With these expanded context windows, feeding large documents to LLMs using KAG has become practical. Concerns about retrieval accuracy, cost, and speed have diminished thanks to advancements in models like <strong>Gemini 2.0</strong>.</p>
+
+<h2>Benefits of KAG</h2>
+
+<p><strong>Retrieval Accuracy</strong>: Tests have shown near-perfect recall of specific information within vast contexts. Gemini 2.0 achieves extraordinary results, reducing hallucination rates. We can expect this accuracy to improve with future models.</p>
+
+<p><strong>Cost and Speed</strong>: The cost per million input tokens has decreased significantly. For instance, Gemini 2.0 Flash charges only <strong>10 cents per million tokens</strong>, making it 96% cheaper than some alternatives. Speeds have also improved, with results returned in seconds even for large contexts.</p>
+
+<h2>Practical Example</h2>
+
+<p>I built a simple "chat with PDF" application using KAG and Gemini 2.0. With just about ten lines of code, I passed a document URL and a user message to the model, and it worked out of the box.</p>
+
+<p>For a more complex case, I aimed to build a pipeline to retrieve the most relevant code examples from an API documentation website. By filtering and scraping relevant pages, I fed the markdown content to the model. The entire process was fast and cost-effective, and the model accurately provided the needed information.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>In general, my go-to approach now is to <strong>avoid RAG</strong> when possible and feed all relevant context to the LLM using KAG. This strategy simplifies development and leverages the expanded capabilities of modern models like Gemini.</p>
+
+<p>However, RAG still has its place, especially when dealing with extremely large or diverse databases that exceed even the expanded context windows. In such cases, combining traditional search methods or parallel LLM calls can be effective.</p>
+
+<p>As LLMs continue to evolve, approaches like KAG open new possibilities for building applications that are both powerful and efficient.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
