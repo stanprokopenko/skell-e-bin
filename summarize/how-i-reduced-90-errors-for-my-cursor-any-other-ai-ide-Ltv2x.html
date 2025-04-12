@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">How I reduced 90% errors for my Cursor (+ any other AI IDE)</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<h2>Common Issues with AI Coding Agents</h2>
+
+<p>If you've been <strong>AI coding</strong> enough, you must have experienced problems where you ask <strong>Cursor</strong> to implement a small change, but it messes up your whole project. Or maybe Cursor isn't aware of all the dependencies in your codebase and implements something that leads to loads of errors. This is a very common issue with <strong>AI coding agents</strong> in general, no matter which platform you're using.</p>
+
+<h2>Introducing Task Management Systems</h2>
+
+<p>There's one technique that shows promising improvements and will make your Cursor produce way fewer errors: <strong>giving your AI coding agent a task management system</strong>. It helps the agent understand the overall implementation plan and control the amount of context that goes into each step when it's implementing specific tasks.</p>
+
+<p>I was able to build a fully functional <strong>multiplayer online drawing game</strong> where both players can draw images of a given word, and we send the result to GPT-4. It looks at the images, gives an evaluation, and picks the winner. This whole game was actually implemented by Cursor with just one shot, without much error, which is absolutely insane.</p>
+
+<p>That's why today I want to show you what my workflow is and how you can adopt it for your own projects.</p>
+
+<h2>Simple Task Management with Cursor</h2>
+
+<p>Before using any of these tools, people have been hacking together <strong>task management workflows</strong> to improve performance for a while. At its core, it basically means you ask Cursor to break down your complex <strong>PRD</strong> (Product Requirements Document) into small tasks and have a document where Cursor can track and maintain what tasks are coming and what tasks have already been done.</p>
+
+<p>Here's a quick example. The most basic implementation is in your Cursor project: you create a <strong>Cursor rule</strong> that looks something like this. Basically, it's a rule where you tell Cursor to always refer to <strong>task.md</strong> to keep track of what tasks have been done and what tasks haven't. </p>
+
+<p>With this, we can create a <strong>task.md</strong> file and give a prompt:</p>
+
+<p><em>"I want to build an X app. Help me break it down into small tasks of our core features and add to task.md."</em></p>
+
+<p>Cursor will create a list of tasks, and after it finishes every single task, it will just come back and mark those tasks as completed. So it has a context of the overall implementation plan. With this method, it already helps a ton for executing complex tasks with Cursor.</p>
+
+<h2>Advanced Task Management Tools</h2>
+
+<p>But tools like <strong>Taskmaster AI</strong> and <strong>Rocode's Boomerang Tasks</strong> bring even more sophisticated task management behavior into AI coding agents.</p>
+
+<h3>Taskmaster AI</h3>
+
+<p>For example, <strong>Taskmaster AI</strong> is a command-line package that you can run in Cursor or Wingsurf Data. It utilizes <strong>Claude 3.7</strong> or a more advanced model to look at the PRD you have and break it down into small subtasks by running a simple command line like:</p>
+
+<p><code>bash
+
+taskmaster parse PRD</code></p>
+
+<p>What's really amazing about it is that it breaks down tasks in logical order, considering all the dependencies between different tasks. So you won't have situations where Cursor implements something but requires other dependencies that haven't been implemented yet.</p>
+
+<p>It also has useful commands like <strong>analyze complexities</strong> to use Perplexity and Claude to analyze how complicated each task is. If a certain task's complexity score is very high, it will allow you to expand on those tasks further by breaking down those complex tasks into even smaller bits. The success rate of delivering a functional application increases dramatically.</p>
+
+<h3>Rocode's Boomerang Tasks</h3>
+
+<p>Rocode's <strong>Boomerang Tasks</strong> does something similar. It gives AI agents tools like <strong>New Tasks</strong> to break down a complex project into small bits and keep track of progress. These tools have completely changed my workflow.</p>
+
+<h2>My New AI Coding Workflow with Task Management Systems</h2>
+
+<p>I'm going to quickly take you through what my new <strong>best practice AI coding workflow</strong> is with these new tools.</p>
+
+<h3>Using Rocode's Boomerang Tasks</h3>
+
+<p>Firstly, let's talk about Rocode's Boomerang Task feature. If you don't know Rocode, you can consider it an open-source Cursor that lives inside <strong>Visual Studio Code</strong>. It's totally free to use. All you need to do is provide your own <strong>Anthropic</strong> key, and then it will just work like any other AI coding agent that you've been using.</p>
+
+<p>What's really cool about Rocode is that, unlike Cursor where you only have a few predefined agent modes, Rocode allows you to <strong>create your own modes</strong>. By default, they provide a <strong>Coding Agent</strong>, an <strong>Architect Agent</strong> to help you with planning, and a <strong>Debug Agent</strong> to help you figure out where the errors are. But you can also build custom modes like <strong>Boomerang Mode</strong>, which focuses on planning and breaking down the plan into smaller, manageable pieces.</p>
+
+<p>Think of it like delegating your work to specialized assistants. Each subtask runs in its own context. So I can choose a <strong>Boomerang Mode</strong> that I customized and then say, <em>"Help me build a to-do app."</em> At the top, you can see that it will keep track of how many tokens are consumed, as well as the total amount of API cost.</p>
+
+<p>It will first delegate a planning task to the <strong>Architect Agent</strong>, which will have a system prompt where it continuously confirms with me about the requirements. Then it will start planning out the project, breaking it down into specific features, figuring out things like user stories, key features, components, project structure, state management, and many more. So it has a full understanding of all dependencies between different functions.</p>
+
+<p>I can give feedback in the middle, and once the plan is finished and broken down into small tasks, it can switch to <strong>Code Mode</strong> to start generating the code. The <strong>Code Agent</strong> will start executing different tasks based on the plan and then complete the actual application for me. You can see the result here is very high quality, and it even has functionality built in where the agent can run the application in the browser, see the result, and perform automated testing as well. With this, the result already feels better than what I got out of the box from Cursor.</p>
+
+<h3>Integrating Taskmaster AI with Cursor</h3>
+
+<p>On the other hand, <strong>Taskmaster AI</strong> integrates much more deeply into Cursor and Wingsurf. First, let's <strong>install Taskmaster AI</strong>. You can open a terminal in any folder and do:</p>
+
+<p><code>bash
+
+npm install -g taskmaster-ai</code></p>
+
+<p>Once it's finished, you can run a few different commands. One is:</p>
+
+<p><code>bash
+
+taskmaster init</code></p>
+
+<p>This will set up the project inside the folder. You can just do:</p>
+
+<p><code>bash
+
+taskmaster init</code></p>
+
+<p>But I would suggest you set up the project first. Like if you're building a Next.js project with <strong>Chasen</strong>, you can just use that command. Once it's done, we can do:</p>
+
+<p><code>bash
+
+cursor my-app</code></p>
+
+<p>Inside here, we can do:</p>
+
+<p><code>bash
+
+taskmaster init</code></p>
+
+<p>This will ask for the <strong>project name</strong>, and I'll just call it <strong>my-app</strong>. Description doesn't really matter. You can skip all those steps and just let it set things up.</p>
+
+<p>What will happen now is that on the left side, you'll first see it adds a few <strong>Cursor rules</strong>. Some of them are generic ones, like a Cursor rule that basically teaches Cursor how it can add new Cursor rules. So as you go deep into the implementation, you can ask it to reflect and create rules about the mistakes it made, for example, and it will follow these rules to create the next Cursor rules. This <strong>self-improve</strong> is basically the same thing, it tries to get Cursor to do this proactively.</p>
+
+<p>The <strong>step workflow</strong> is where it teaches Cursor about all the commands it will need to actually check all the tasks in the backlog. If you're using Wingsurf, there will be a Wingsurf root here as well. Inside the <strong>scripts</strong> folder, it provides a structure showing what a PRD can look like.</p>
+
+<p>But the most important one is that it will have this <strong>.env.example</strong> file. What you need to do is swap out the <strong>Anthropic API key</strong> as well as the <strong>Perplexity key</strong> here. <strong>Anthropic</strong> is a model that will be used to break down your PRD into small tasks, and they also use <strong>Perplexity</strong> to do some research. So if part of a task is using a new package that just released, then it will actually use Perplexity to fetch the latest developer documents and include those into the task information. I recommend you add both API keys here, and once you do that, we can start creating our PRD.</p>
+
+<p>There are many different ways you can create PRDs. If you don't have access to certain tools, you can chat with the <strong>Cursor agent</strong> to help you generate a PRD. For example, I can just say:</p>
+
+<p><em>"Help me build an online game like </em><em>Skribbl</em><em>, but instead of a human guessing the word, it will be a large model that guesses the word. So each round, all users will be given the same word, and they have 60 seconds to draw the image. In the end, all images will be sent to GPT-4, and it will choose which image is closest to the word. Now play the role of the engineering manager and help me think through what are the core features of implementing such a game."</em></p>
+
+<p>And then it will spit out the core functionalities. Obviously, I can chat back and forth, but once I finish, I can just say:</p>
+
+<p><em>"Great, now let's build the core MVP features and requirements into </em><em>prd.txt</em><em>, using the example </em><em>prd.txt</em><em> as reference, which is what we have showing here."</em></p>
+
+<p>Then you will see a PRD has been created with a good amount of details, and I will accept that.</p>
+
+<p>Now, since we have this PRD generated, the next step is we can use this command:</p>
+
+<p><code>bash
+
+taskmaster parse PRD scripts/prd.txt</code></p>
+
+<p>to break down this PRD into small tasks, and this is where the power of Taskmaster begins. Now it will start creating task files based on this PRD, and you will see here where we have the <strong>tasks</strong> folder. It has all the tasks that were created from Taskmaster.</p>
+
+<p>We can do:</p>
+
+<p><code>bash
+
+taskmaster list</code></p>
+
+<p>and this will show you the list of tasks that have been created. What's really cool about Taskmaster's task list is on the right side, you can see there's a <strong>dependencies</strong> column. So when breaking down tasks, it will actually list out the tasks in a logical order, making sure there are clear dependencies mapped out. So when it implements, it can implement in the right order.</p>
+
+<p>There are also some pretty useful commands. You have this command called <strong>analyze complexities</strong>. What this will do is that I can do:</p>
+
+<p><code>bash
+
+taskmaster analyze complexity</code></p>
+
+<p>This will basically send all the tasks I created to <strong>Claude 3.7</strong> as well as <strong>Perplexity</strong>, asking it to evaluate how complicated or how difficult it is to implement each feature. Once it is done, I can do:</p>
+
+<p><code>bash
+
+taskmaster complexity report</code></p>
+
+<p>It will show me the evaluation of each task and its complexity score.</p>
+
+<p>But what's really useful is for those complex tasks, it also gives you the <strong>prompt</strong> that you can copy. At the moment, you can't really copy this directly if the UI is just broken up, but you can just copy the first one and go to <strong>complexity report</strong> and find the specific <strong>ID</strong>, which is this one, and we can copy the <strong>expansion prompt</strong>. So here, it generates a prompt:</p>
+
+<p><em>"Detailed technical implementation of HTML5 canvas component, including drawing tools, input handling across all devices."</em></p>
+
+<p>So I can just do this, and now it's breaking down that specific task into smaller ones. And as we know, once a complex task is broken down into smaller ones, it is more likely to succeed without any error.</p>
+
+<p>You can continue doing that by adding another one for task number five. So you get the drill. Basically, you can do this process back and forth a few times until you're happy with the backlog.</p>
+
+<p>You can also do things like <strong>update</strong> as well. So if later down the road you decide to change the plan, you can also do:</p>
+
+<p><code>bash
+
+taskmaster update ID=4 prompt="Make sure we use Three.js"</code></p>
+
+<p>What will happen is that once you give this prompt, it will actually update the whole plan based on this new instruction, which is really helpful.</p>
+
+<p>Once it's done, you can do:</p>
+
+<p><code>bash
+
+taskmaster list with subtasks</code></p>
+
+<p>This will show all subtasks directly, making it easier for you to review all the tasks.</p>
+
+<p>So that's pretty much it. Once we've done this, you can just go to the Cursor agent and say:</p>
+
+<p><em>"Let's start implementing the app based on the tasks we created using Taskmaster. Let's check the next most important task first."</em></p>
+
+<p>You might have this error that it's using the wrong command, so I will just tell it:</p>
+
+<p><em>"Do not use script dev.js. Use Taskmaster instead. Just list all tasks created and follow the plan."</em></p>
+
+<p>Then it will see the plan and decide to implement the first one first. As it works on the task, it will also set the status of this task to <strong>in progress</strong>.</p>
+
+<p>Since I actually turned on the <strong>YOLO mode</strong> of Cursor, which means it doesn't ask me for permission for running any command lines, I can basically just go drink a coffee and let it do the work. As it completes, it will mark this task as <strong>done</strong> and move on to the next one by doing <code>taskmaster next</code>.</p>
+
+<p>Now, when you're in YOLO mode, I think Cursor will limit to 25 courses if you're using <strong>Claude 3.7</strong>, but you can actually put on <strong>Gemini 2.5 Pro Max</strong>. This will allow you to skip this limit and just do like 2,000 courses without any pause.</p>
+
+<p>So it's actually pretty crazy. It just continues executing tasks one after another and generates a whole bunch of files, probably a few thousand lines of code. Let's just run that first. So I'll do:</p>
+
+<p><code>bash
+
+npm run dev</code></p>
+
+<p>If I try to open this, it has a lobby built-in and authentication built-in. So I can give a name, choose an avatar, start playing, and my user has been created. I can set how much time we have for drawing, the difficulty, and whether it's a public game or not. So it's pretty good. I can create, but it looks like the actual game inside hasn't been done yet. But it's pretty impressive how much it is able to deliver in just one go.</p>
+
+<p>I can come back and do:</p>
+
+<p><code>bash
+
+taskmaster list with subtasks</code></p>
+
+<p>You can see that it has done the first four tasks, but it hasn't fully finished developing the game room logic into my UI component. Maybe that's why the actual game room is not showing up.</p>
+
+<p>So I can ask it to continue to implement, but you saw that I had this error, and then I can prompt it:</p>
+
+<p><em>"Now, refactor the errors you made and create new Cursor rules to make sure you don't make those mistakes again."</em></p>
+
+<p>Now you can see that it is actually adding new Cursor rules about Next.js app router, though for some reason it didn't actually create content, which is a bit weird. I'll accept this one. For now, I'll just copy-paste manually. I probably need to update Cursor rules to make sure it will be saved properly.</p>
+
+<p>But now I'm going to continue the task. Let's check what the next task is to complete to a point where we can do some quick testing of the drawing.</p>
+
+<p>After another 15 minutes of it just doing the tasks by itself, I got this game that's kind of fully functional, where I can give it a name, choose my avatar, start playing, and also create a room called "Jason's Room." I can set a timer about how long people can draw, as well as the number of rounds and the difficulty. If I create a room, other people will be able to see the room I created as well. Click on <strong>Join</strong>, and we will see multiple players in the room.</p>
+
+<p>If I start this, I will have this canvas where people can start drawing to describe what the word is. On the top right corner, there's also a timer showing how much time is left. Once it finishes, it will send both results to ChatGPT, and GPT will look at the images, give the descriptions and evaluations, pick the winner to get points, and then move on to the next one.</p>
+
+<p>So it's pretty amazing that it did a whole multiplayer game like this by itself in 20 minutes. This shows how much performance gain you can get by equipping Cursor with the right task management systems. What's really exciting is that this is just the beginning. I can imagine those tools and systems becoming way better in a few months' time.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>I hope you found this workflow helpful. I'll continue sharing new tips and workflows I've learned.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
