@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">Gemini 2.5 Flash - First Test and Impression: Google Wins Again?</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>I've been eager to test out <strong>Gemini 2.5 Flash</strong>, Google's latest language model. The pricing caught my eye: <strong>$0.015 per 1,000 tokens in</strong> and <strong>$0.35 per 1,000 tokens out</strong> with reasoning enabled. Turning off reasoning drops the price significantly, making it about <strong>4.5 times cheaper</strong> than some alternatives.</p>
+
+<h2>Overview of Gemini 2.5 Flash</h2>
+
+<p>The benchmarks show promising results. On the LM Arena, it ranks just behind GPT 4.5. But benchmarks only tell part of the story, I wanted to see how it performs in a real-world task.</p>
+
+<h2>Experiment Setup</h2>
+
+<p>I decided to build an <strong>MCP server</strong> that uses the <strong>Replicate API</strong> and the <strong>Cling AI video generator</strong>. Previously, I did this with GPT 4.1 and Codex. This time, I wanted to see how Gemini 2.5 Flash handles it under different settings.</p>
+
+<h3>Experiment Goals</h3>
+
+<ul>
+
+<li>Build the MCP server in one shot.</li>
+
+<li>Test with <strong>thinking mode</strong> off and on.</li>
+
+<li>Use different <strong>thinking token budgets</strong>: 0, 1,000, and 20,000.</li>
+
+</ul>
+
+<h3>Prompt Used</h3>
+
+<p>I provided the same prompt for all tests:</p>
+
+<blockquote>
+
+<p>Create an MCP server that uses the Replicate API and the Cling AI video generator. Features:</p>
+
+<ul>
+
+<li>Generate a video from a text prompt string argument.</li>
+
+<li>Return the URL of the video from the Replicate API.</li>
+
+<li>The server should run on Cloud Code.</li>
+
+<li>Use the MCP add command to include the API token as an argument.</li>
+
+<li>Write the setup and code for the MCP server.</li>
+
+</ul>
+
+<p>Documentation for Cloud Code MCP, Cling AI, and Replicate is provided.</p>
+
+</blockquote>
+
+<h2>Experiments</h2>
+
+<h3>Experiment 1: Thinking Mode Off</h3>
+
+<p>I set up the AI Studio with thinking mode off and temperature at 0.7. I fed the prompt and received instructions to:</p>
+
+<ul>
+
+<li>Create the project folder.</li>
+
+<li>Initialize with <code>npm init -y</code>.</li>
+
+<li>Install dependencies.</li>
+
+<li>Write <code>index.ts</code>.</li>
+
+<li>Update <code>package.json</code> and <code>tsconfig.json</code>.</li>
+
+<li>Build with <code>npm run build</code>.</li>
+
+</ul>
+
+<p>There were some build errors due to comments in <code>package.json</code> (a known issue with Gemini). After fixing them, the build succeeded. I added the server to Cloud Code using the MCP add command, tested it, and it worked smoothly.</p>
+
+<h3>Experiment 2: Thinking Mode On with 1,000 Tokens</h3>
+
+<p>Next, I enabled thinking mode with a <strong>1,000 thinking token budget</strong>. The AI provided similar setup instructions. After following them, I encountered some misunderstandings about adding the server to Cloud Code. I prompted for clarification and received the correct command. The server built with some minor issues, but after fixes, it worked as before.</p>
+
+<h3>Experiment 3: Thinking Mode On with 20,000 Tokens</h3>
+
+<p>Finally, I set the thinking token budget to <strong>20,000</strong>. The AI spent more time "thinking" but provided detailed instructions. The build had <strong>zero errors</strong>, which was impressive. However, it didn't include instructions for adding the server to Cloud Code. After asking for guidance, I received the correct steps. The server worked, but when generating a video, the URL wasn't returned properly. This required further debugging.</p>
+
+<h2>Results and Observations</h2>
+
+<ul>
+
+<li>
+
+<p><strong>All three servers worked</strong>, but there were differences:</p>
+
+<ul>
+
+<li>With thinking mode off, there were initial build errors due to known issues.</li>
+
+<li>With a low thinking token budget, there were minor misunderstandings but overall success.</li>
+
+<li>With a high thinking token budget, the build was error-free, but some steps were missing, and there were issues with the output.</li>
+
+</ul>
+
+</li>
+
+<li>
+
+<p><strong>Thinking mode and token budget affect the AI's performance</strong>:</p>
+
+<ul>
+
+<li>Higher token budgets allow the AI to provide more detailed responses.</li>
+
+<li>The thinking mode seems to influence the depth and accuracy of the AI's reasoning.</li>
+
+</ul>
+
+</li>
+
+<li>
+
+<p><strong>Pricing is a major advantage</strong>:</p>
+
+<ul>
+
+<li>Gemini 2.5 Flash is <strong>significantly cheaper</strong> than alternatives, especially with reasoning turned off.</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+<p style="text-align: center;">* * *</p>
+
+<p>My initial impressions of <strong>Gemini 2.5 Flash</strong> are positive. It's powerful, cost-effective, and handles real-world tasks well. The <strong>thinking mode</strong> and <strong>token budget</strong> offer flexibility, but I need to explore how to best utilize them. I'm excited to continue experimenting with this model and see how it can enhance my development workflows.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
