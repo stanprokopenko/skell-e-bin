@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">INSANE Parallel Coding with Claude Code + Cursor MCP Server</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>Today, I dove into an exciting experiment: <strong>parallel coding</strong> using two clients communicating through an <strong>MCP server</strong>. The idea was to have <strong>Client One</strong> (Cursor) and <strong>Client Two</strong> (Cloud Code) collaborate on a single project simultaneously.</p>
+
+<h2>Setting Up the MCP Server</h2>
+
+<p>I set up an MCP server running on <strong>localhost:8765</strong>. Both clients connected to this server via the <strong>MCP sync bridge</strong> tool. This allowed them to communicate by sending messages and updates about their progress.</p>
+
+<h2>Communicating Between Clients</h2>
+
+<p>To test the setup, I configured system messages for both clients. Client One and Client Two could send and receive messages, ensuring they were on the same page during development. Although it wasn't fully autonomous yet, the basic communication was functioning.</p>
+
+<h2>Building a Parallel Coding Project</h2>
+
+<p>I used <strong>Gemini 2.5 Pro</strong> to create a step-by-step plan for both clients. The project was to build a simple <strong>photo upload app</strong> that stores images in a local directory called <strong>"images"</strong>. Client One focused on the <strong>backend</strong>, while Client Two worked on the <strong>frontend</strong>.</p>
+
+<p>I provided each client with their respective plans and set them to run in <strong>full automation</strong>. They both started working on their parts, creating <strong>backend</strong> and <strong>frontend</strong> directories, and coding simultaneously.</p>
+
+<h2>Observations and Results</h2>
+
+<p>The clients communicated efficiently, exchanging messages about API contracts and integration testing. In a short time, they completed the project. I ran the <strong>backend server</strong> on <strong>localhost:3000</strong> and opened the frontend to test the app.</p>
+
+<p>I uploaded an image, and it showed a preview and confirmed successful upload. Checking the <strong>"images"</strong> directory, I found the uploaded file, confirming that the app worked as intended.</p>
+
+<h2>Future Improvements</h2>
+
+<p>While the initial test was successful, there's room for improvement. I aim to enhance the communication between the clients, making it more autonomous and efficient. Specifically, I'd like them to implement code in stages and synchronize after completing certain tasks.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>This experiment demonstrated that <strong>parallel coding</strong> with two clients communicating through an MCP server is feasible. I'm excited to continue refining this setup and explore its full potential in future projects.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
