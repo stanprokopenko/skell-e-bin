@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">RAG is Exploding: 58 NEW RAG Methods in 48 hours</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>Today, I want to dive into the fascinating world of <strong>Retrieval-Augmented Generation (RAG)</strong>. Over the past few years, RAG systems have undergone significant transformations. They've evolved from simple models into complex, multi-agent architectures. Let's explore how RAG has developed and the innovative techniques shaping its future.</p>
+
+<h2>From Monolithic Models to Specialized Agents</h2>
+
+<p>In the early days of artificial intelligence, we relied on monolithic <strong>Large Language Models (LLMs)</strong> to perform both <strong>retrieval</strong> and <strong>generation</strong> tasks. These models handled everything from searching for information to generating responses. However, we soon realized this approach wasn't efficient. The LLMs weren't particularly adept at finding information because they weren't optimized for search tasks.</p>
+
+<p>To address this, we started training specialized <strong>search LLMs</strong>. These models focused solely on finding the best possible documents for the expert LLMs to generate responses. By separating the retrieval process from the generation, we improved the overall performance of RAG systems. This led to the development of <strong>multi-agent RAG systems</strong> with dedicated agents for different tasks.</p>
+
+<h2>The Role of Reinforcement Learning</h2>
+
+<p>A significant breakthrough came with the <strong>Deep Retrieval (DeepSeek R1)</strong> model. This approach used <strong>reinforcement learning</strong> to train search LLMs. Instead of relying on supervised data or human annotations, the models learned through <strong>trial and error</strong> using real-time data. We defined <strong>reward functions</strong> based on retrieval metrics, allowing the system to optimize itself for better performance.</p>
+
+<h2>Facing New Challenges</h2>
+
+<p>While DeepSeek R1 was a step forward, it had limitations. The reward signals were disconnected from the downstream answer quality. This meant that improved retrieval didn't always lead to better final answers. The tight coupling between search and generation made it difficult to isolate improvements in retrieval alone.</p>
+
+<h2>Introducing S3: Search, Select, and Surf</h2>
+
+<p>To overcome these challenges, we developed a new method called <strong>S3</strong>, <strong>Search, Select, and Surf</strong>. This framework trains a search agent using reinforcement learning with a novel reward signal, called <strong>Gain Beyond RAG (GBR)</strong>. The key idea is to reward the search agent based on how much it improves the expert LLM's performance compared to a naive RAG system.</p>
+
+<p>By decoupling the search agent from the generator, S3 allows us to use any generator LLM, whether open-source or proprietary. This modularity means we can optimize the search agent without needing access to the generator's internal workings. Impressively, S3 consistently outperforms end-to-end approaches like <strong>Search R1</strong>, showing that focusing on the search policy yields substantial gains.</p>
+
+<h2>The Revival of RAG</h2>
+
+<p>Recent research has spurred a revival in RAG systems. New methods and architectures are being proposed, such as multi-agent RAGs, graph-based RAGs, and specialized knowledge graphs. Researchers worldwide are exploring ways to improve RAG's performance and address its challenges.</p>
+
+<p>For example, splitting queries using <strong>semantic partitioning</strong> and employing type-specialized knowledge bases help handle complex tasks. There's also a growing focus on the security aspects of RAG, with studies on defending against knowledge extraction attacks and jailbreaking attempts.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>The field of Retrieval-Augmented Generation is experiencing a renaissance. By emphasizing the optimization of search agents and leveraging reinforcement learning, we've achieved significant performance improvements. Decoupling the search and generation agents, as demonstrated by S3, opens up new possibilities for flexible and efficient RAG systems. As we continue to innovate, RAG will play an increasingly vital role in artificial intelligence applications.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
