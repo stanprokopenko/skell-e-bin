@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">How to Draw Curved Objects in Perspective</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>I wanted to share some insights from analyzing an arrow drawing by Blondie the Good. The arrow presents several technical challenges worth exploring, particularly regarding structure, perspective, and curves.</p>
+
+<h2>Understanding the Arrow's Structure</h2>
+
+<p>At first glance, the arrow appears to taper, but upon closer inspection, it maintains a <strong>constant width</strong> within its box. The illusion of tapering arises from the curve interacting with perspective.</p>
+
+<h3>Dealing with Curves in Perspective</h3>
+
+<p>When dealing with curves in perspective, it's crucial to use <strong>X lines</strong>, lines parallel to the X-axis, to keep track of an object's width. This helps avoid confusion, which is caused by the illusion of narrowing due to curvature.</p>
+
+<h2>Orthographic Projection</h2>
+
+<p>To better understand the arrow's structure, I projected it onto the ground plane, essentially creating an <strong>orthographic view</strong>. This allows us to see the arrow as a flat shape, eliminating perspective distortion.</p>
+
+<h3>Projecting the Arrow onto the Ground Plane</h3>
+
+<p>By projecting points from the arrow down to the ground plane using vertical lines, we can trace its outline on the ground. Connecting these points reveals the true shape of the arrow, confirming it doesn't taper.</p>
+
+<h2>Introducing Tapering</h2>
+
+<p>Adding tapering to the arrow, changing its width along the X-axis, introduces additional complexity. Now the arrow not only curves on the Y-axis (<strong>pitch</strong>) but it also narrows along the X-axis.</p>
+
+<h3>Solving for Tapering and Curves</h3>
+
+<p>To accurately depict the tapered arrow, I used a method involving projecting points from the top view down and across, using right angles to find exact positions. This process involves:</p>
+
+<ul>
+
+<li>Determining the new, tapered widths at various points.</li>
+
+<li>Projecting these widths down to the ground plane.</li>
+
+<li>Combining these with the heights from the curved path to find intersection points.</li>
+
+<li>Connecting these points smoothly to form the <strong>compound curve</strong> of the tapered arrow.</li>
+
+</ul>
+
+<p>This method ensures precise construction but can be quite complex.</p>
+
+<h2>Compound Curves and Artistic Choice</h2>
+
+<p>Drawing compound curves, where an object curves and tapers simultaneously, is challenging. While technical accuracy is achievable through meticulous construction, it might not always serve the artistic purpose.</p>
+
+<h3>Technical Methods vs. Artistic Expression</h3>
+
+<p>As artists, we may choose to <strong>simplify</strong> or <strong>exaggerate</strong> certain aspects for visual impact. Overemphasis on technical correctness can hinder creativity. Recognizing when to deviate from strict accuracy allows for more expressive and effective artwork.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>Understanding the technical aspects of curves, tapering, and perspective is valuable, but it's essential to balance this with artistic intuition. We'll explore more practical and creative approaches to drawing curves in future lessons. If you're eager to dive deeper, remind me later, and I'll share insights about <strong>Dürer's Eyeball</strong>.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
