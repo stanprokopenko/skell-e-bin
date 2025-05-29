@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">How to Draw Curved Objects in Perspective</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>I've been studying Blondie the Good's arrow drawing, and I've found many insights worth sharing. It dives deep into the structure of an arrow in space, and I think it's worth spending a session imagining and solving the technical challenges it presents.</p>
+
+<h2>Understanding the Structure</h2>
+
+<p>Let's start with the drawing itself. I printed it out and added some annotations, hoping to respect the original work. We know the space where the arrow fits because Blondie fixed it within a box. Whether the arrow <strong>tapers or not</strong>, we can't tell just yet. I propose that it does <strong>not</strong> taper.</p>
+
+<p>It might look like it's getting thinner in some areas, but I believe the lines of the arrow can be tracked on either side, touching a <strong>constant-width box</strong>. We've got to address why it appears to be thinning in the middle.</p>
+
+<p>To illustrate this, let's exaggerate the effect. Now it seems even thinner, right? But in reality, it's only thinner on an axis that isn't relevant to our analysis. If we stick with <strong>X lines</strong> in this drawing, they will all be the same. That's one reason we draw <strong>width lines</strong>: to keep track of the width of the object, not just our perception of it, until we've learned to see these things intuitively.</p>
+
+<h2>The Importance of Width Lines</h2>
+
+<p>The X lines may change width if they change on the object, or if we choose to put it in extreme perspective, that rapidly approaching wide-angle lens effect. In this drawing by Blondie the Good, the curve can confound our ability to be sure of the width until we understand what is going on.</p>
+
+<p>By the way, someone commented on the dullness of my pencil and felt the urge to sharpen it. I'm choosing a non-sharp pencil on purpose. It makes a thicker line, which you can see more easily, especially if you're watching this on your smartphone. No judgment, it's a convenient way to learn.</p>
+
+<h2>Analyzing the Arrow in Orthographic View</h2>
+
+<p>The curve in the arrow is only an <strong>up and down curve</strong>, it does not twist like Lucy's arrow. Not twisting should make this simpler. Let's go as simply as we can to the <strong>ortho</strong>, which we can deduce because the arrow is in a box.</p>
+
+<p>We're creating the ground plane with just a hint of the box, and we're going to see what the arrow would look like if we were looking straight down from above. How do we know where a point on the arrow is on the ground? Since that is a right angle, we can draw a vertical line straight down, touch that point, get the base of the box, and then run the same line system out on the <strong>Z</strong> axis.</p>
+
+<p>Let's do this for all the relevant points. By connecting these points, we can draw the arrowhead on the ground as a flat arrow. We could have done this on the top of the box or just gone to the ortho view if we were working from one, and see that it doesn't taper.</p>
+
+<h2>Dealing with Curves and Pitch</h2>
+
+<p>Even though the arrow curves, it only curves on one axis, <strong>down to up</strong>. It moves straight forward once it has lifted off the ground plane. One way to clarify this is to place a light source directly above it, emphasizing that there's no messing about with width.</p>
+
+<p>We need to name that curve. The technical name for movement that only goes <strong>down or up as it moves forward and back</strong> is <strong>pitch</strong>. Think of it like the movement seen in a side view, similar to a musical staff showing the pitch of notes. That's what's happening with this curve, it goes down, then gently up, but not as far up as it went down. Then, very importantly, it goes straight again on a pure <strong>Z-line</strong>.</p>
+
+<p>This defines the kind of movement that the arrow is making.</p>
+
+<h2>Simplifying Perspective by Thickening the Arrow</h2>
+
+<p>Perspective can be confusing, so when learning it, it's good to make things so clear they can't be misread. Let's thicken the arrow by <strong>extruding</strong> it upward. I'm extruding it up rather than down. Either way creates surprises.</p>
+
+<p>As we extrude the arrow, we need to be careful with the lines. For example, when I carry a line all the way through to the front, I shouldn't, because it will be behind another part of the arrow. We have to be cautious not to darken lines until we're sure where they stop.</p>
+
+<h2>Adding Taper to the Arrow</h2>
+
+<p>Now, let's take on the challenging task of making the arrow curve and also <strong>taper</strong> as it moves forward. I'll show you how.</p>
+
+<p>First, let's review, the pitch moves only on <strong>Y</strong> and <strong>Z</strong>, <strong>down on Y as it moves forward on Z</strong>, then <strong>up on Y as it moves forward on Z</strong>. If we taper the arrow, we'll add movement on the <strong>X-axis</strong>. We're creating a complexity that we shouldn't begin with, in my opinion.</p>
+
+<p>We should start by finding the flat ortho view on the top plane, the same way we found it on the bottom, and be sure of the points where it touches on the sides. We can decide how much to narrow the arrow in the top view. Let's say we bring it in a certain amount on one side, and match that amount on the other side to keep it symmetrical. We're <strong>audaciously choosing a taper</strong>.</p>
+
+<h2>Solving the Technical Challenge</h2>
+
+<p>To solve this without ambiguity, we need to make note of how much the straight arrow tapers on the <strong>X-axis</strong> in the plan view. We establish the widths without the complication of a curve.</p>
+
+<p>Next, we find the height from the curve and use the simplicity of right angles to run the width of that height across, and the height of that width down. By combining these methods, we can find precise points along the arrow's curve that account for both the taper and the curve.</p>
+
+<p>By plotting these points, we can draw the arrow with an accurate <strong>compound curve</strong>. This method ensures that the curve is not only visually smooth but also technically correct.</p>
+
+<h2>The Difficulty of Compound Curves</h2>
+
+<p>Compound curves are difficult. I'm not putting this on you to intimidate you, but if you really care, what I've shown you <strong>cracks the code</strong>.</p>
+
+<p>Getting these curves technically correct may not be the best idea for an artist. Let me explain why. When we aim for pure accuracy, we might lose the expressive quality that's important in art.</p>
+
+<p>For example, if we taper the arrow with straight lines from the top, it might not capture the essence of the curve. If the sides tapered concavely, it would accentuate the barrel roll on our side but contradict it on the other, which could look awkward or at least damage the illusion.</p>
+
+<p>A decisive artist, <strong>not bound by technical correctness</strong>, could choose to cheat, the way filmmakers cheat when they shoot scenes in separate environments and piece them together to seem like one. There's no moral component to that kind of cheating. There's a higher calling, which is to create a worthy illusion.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>Curves on curves can be very complex. We now know it can be done, but it's not where we're headed. We will learn curves in a much more useful and creative way.</p>
+
+<p>If you get eager later, remind me of this, and I'll tell you about <strong>Dürer's Eyeball</strong>.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
