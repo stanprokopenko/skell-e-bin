@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skell-E HTML Preview</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <article>
+    <header>
+        <h1 id="title">How to Handle Objects Not Touching the Picture Plane</h1>
+        <a href="#" class="button copy-link" onclick="copyToClipboard(); return false;">Copy Code</a>
+    </header>
+    <main id="code-to-copy" class="container">
+<p>In previous lessons, you've seen how to transfer heights easily when an object has a corner touching the picture plane. But what happens when an object doesn't conveniently touch the picture plane? Let's explore how to handle objects placed <strong>behind</strong> or <strong>in front of</strong> the picture plane.</p>
+
+<h2>Drawing an Object Behind the Picture Plane</h2>
+
+<h3>Creating the Picture Plane</h3>
+
+<p>Start by creating your picture plane. You might use a blue line for this, it helps distinguish the picture plane from other elements.</p>
+
+<h3>Placing the Box</h3>
+
+<p>Place a box <strong>behind</strong> the picture plane. This box won't have a corner touching the picture plane.</p>
+
+<h3>Finding the Vanishing Points</h3>
+
+<p>Place your viewer with a <strong>60-degree cone of vision</strong> somewhere in front of the picture plane. From the viewer, draw lines parallel to the sides of the box to find your <strong>left vanishing point (VPL)</strong> and <strong>right vanishing point (VPR)</strong>.</p>
+
+<h3>Projecting the Lines</h3>
+
+<p>From the viewer, draw lines through each corner of the box until they intersect the picture plane. Mark these intersection points. To keep your drawing clear, you might fade back the initial lines after finding the vanishing points.</p>
+
+<h3>Transferring to the Plan View</h3>
+
+<p>Overlay a piece of vellum (or tracing paper) on your drawing. Remember, you're effectively flipping the picture plane down to see the plan view. Drop vertical lines from the intersection points on the picture plane down onto the plan view. These lines represent where the corners of the box touch the ground plane.</p>
+
+<h3>Establishing the Horizon Line</h3>
+
+<p>Decide where you want your <strong>horizon line</strong>. You can use a blue pencil to draw it and label it clearly to avoid confusion.</p>
+
+<h3>Drawing the Box Above Eye Level</h3>
+
+<p>Place the front corner of the box somewhere <strong>above</strong> the horizon line. Since the box is behind the picture plane, you can't transfer the height directly. Instead, run a line from the corner of the box to the picture plane to find where it touches.</p>
+
+<h3>Transferring the Height</h3>
+
+<p>Once you've found where the line touches the picture plane, bring it down to your plan view. This gives you the <strong>true height</strong>. Run lines from the corners of the box back to their respective vanishing points.</p>
+
+<h3>Completing the Drawing</h3>
+
+<p>Decide on the height of your box by choosing an elevation in your plan view. Project this height back up to the drawing, using the lines you've established. Connect the appropriate points to complete your box in perspective.</p>
+
+<h2>Drawing an Object in Front of the Picture Plane</h2>
+
+<h3>Setting Up the Drawing</h3>
+
+<p>This time, create your picture plane and place the box so that part of it projects <strong>in front of</strong> the picture plane.</p>
+
+<h3>Finding the Vanishing Points</h3>
+
+<p>Place your viewer, perhaps offset to the side for a wider angle view, and draw lines parallel to the sides of the box to find your <strong>VPL</strong> and <strong>VPR</strong>. From the viewer, draw lines through each corner of the box, continue these lines until they intersect the picture plane.</p>
+
+<h3>Projecting to the Plan View</h3>
+
+<p>Drop vertical lines from the intersection points on the picture plane down onto the plan view. Ignore any unnecessary lines from earlier steps to keep your drawing clear.</p>
+
+<h3>Handling the Height</h3>
+
+<p>Since the box extends in front of the picture plane, you can't use the picture plane to determine the true height directly. Instead, run a <strong>height line</strong> from the front corner of the box to where it intersects the picture plane. Bring this point down to the plan view to establish the true height.</p>
+
+<h3>Completing the Drawing</h3>
+
+<p>Use the true height from the plan view to determine the height of your box in perspective. Run lines from this height point back to the vanishing points. Connect the points to complete your box in perspective. You might notice that the box appears larger as it projects out from the picture plane.</p>
+
+<p style="text-align: center;">* * *</p>
+
+<p>When an object doesn't have a corner touching the picture plane, whether it's behind or in front, you need to find the <strong>true height</strong> by transferring measurements to the picture plane and then projecting them back into the scene. This process involves more steps, but it ensures <strong>accurate measurements</strong> in your perspective drawing.</p>
+
+<p>Whenever possible, try to place your picture plane touching an important corner for measuring height. This simplifies the process. Now that you've practiced with simple boxes, you can apply these techniques to more complex objects.</p>
+    </main>
+  </article>
+  <footer><span class="skell-e-sig">&Sigma;&lt;3||-E</p></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
